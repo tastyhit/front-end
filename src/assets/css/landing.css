@@ -1,0 +1,132 @@
+
+/*Shop and Sign topbar*/
+.topbar-wrapper{
+  width:100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.top-bar {
+  display:flex;
+  flex-direction: row;
+  width:20%; 
+}
+
+.top-bar .box {
+  margin: 1.5em 1.5%;
+}
+
+/* Name */
+.top-header{
+  margin-top: 1em;
+}
+
+.top-header h1 {
+  font-size: 4em;
+  color: black;
+  /*text-shadow: 2px 2px black;*/ /*might be better without*/
+  cursor: default;
+  font-family: "Open Sans";
+  font-weight: bold;
+}
+
+/*Lets get started*/
+.zipCode {
+  height:100px;
+}
+
+.zipCode h2 {
+  color: black;
+  margin-top: 1.5em;
+  font-size: 1.7em;
+  cursor: default;
+}
+
+.zipCode h2:first-of-type{
+  font-weight: bold;
+  font-size: 3em;
+}
+
+.inputContainer {
+  margin-top:1em;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+
+/*Cards*/
+
+.info-container {
+  margin-top:3em;
+  width:100%;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  background:linear-gradient(to bottom,rgba(7, 7,7 ,0.3),rgba(7,7,7 ,0.3)), url(../images/background.jpg) repeat;
+}
+
+.box-title h1 {
+  font-family: 'Open Sans';
+  font-size: 1.2em;
+}
+
+.side-side {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.left-side {
+  border-right: 2px solid #2196f3;
+  width: 49%;
+}
+
+.right-side {
+  width: 49%;
+}
+
+.agecheck-wrapper{
+  position: fixed;
+  display:flex;
+  align-items: center;
+  z-index:1;
+  left: 0;
+  top:0;
+  margin: 0 auto;
+  background-color: rgba(0,0,0,0.4);
+  width:100%;
+  height:100vh;
+}
+
+.agecheck-wrapper p {
+  font-size:.8em;
+  font-weight: bold;
+  letter-spacing: none;
+  line-height: 1.3em;
+}
+
+.agecheck-wrapper p:first-of-type{
+  padding-bottom: .5em;
+}
+
+.agecheck-wrapper p:last-of-type{
+  color: rgb(55, 56, 56);
+  font-weight: normal;
+}
+
+.text{
+  padding-bottom: 1em;
+}
+
+
+
+/*less than half*/
+
+.ls-five {
+  width:20%;
+}
