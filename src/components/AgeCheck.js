@@ -22,27 +22,28 @@ const WButton = styled(Button)`
     background:transparent;
     color:#00AAE7;
     border:.1em solid #00AAE7;
+    margin-top:.5em;
     `}
   &:hover{
-     box-shadow:.1em .1em 2em grey;
+     box-shadow:.1em .1em 1.5em grey;
     }     
 `;
 
 
-const AgeCheck = ({age, google}) => (
-    <div className='agecheck-wrapper'>
-      <AgeCard>
+const AgeCheck = ({ age, google }) => (
+  <div className='agecheck-wrapper'>
+    <AgeCard>
       <Title primary>Tasty Hits</Title>
       <div className="text">
-      <p>Discover the best way to smoke cannabis, clean.</p>
-      <p>You must be atleast 21 years of age to view this site.</p>
+        <p>Discover the best way to smoke cannabis, clean.</p>
+        <p>You must be atleast 21 years of age to view this site.</p>
       </div>
       <WButton onClick={age}>I'M AT LEAST 21 YEARS OLD</WButton>
       <WButton secondary >I'M NOT 21 YET</WButton>
-      </AgeCard>
-    </div>
-    
-    
+    </AgeCard>
+  </div>
+
+
 
 )
 export default AgeCheck;

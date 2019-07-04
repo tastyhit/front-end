@@ -8,7 +8,7 @@ const NavBar = () => {
         <div className='topbar-wrapper'>
             <div className='top-bar'>
                 <Button className='box'>Shop</Button>
-                <Button className='box' primary>Sign in</Button>
+                <Button className='box' primary>Log in</Button>
             </div>
         </div>
     )

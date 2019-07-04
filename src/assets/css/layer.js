@@ -4,10 +4,9 @@ import styled, { css } from 'styled-components';
 
 export const Button = styled.button`
     background: transparent;
-    border-radius 0.2em;
+    border-radius: 0.2em;
     border: 2px solid #00AAE7;
     color:#00AAE7;
-    margin: 0.2em 0.3em;
     padding: 1.2em;
     cursor: pointer;
     font-weight:400;
@@ -31,21 +30,16 @@ export const Button = styled.button`
 export const Input = styled.input`
   background: none;
   border: none;
-  margin-right: 1em;
   padding: 5px 0 8px 15px;
-  width: 15em;
   font-size: 1.5em;
-  color: white;
-  box-shadow: 0 2px rgba(0,187,255,0.6);
+  color: black;
   transition: .8s cubic-bezier(.2,.8,.2,1);
   ::placeholder {
-    color: white;
+    color: grey;
     padding-left: 5px;
   }
   :focus {
-    border: 1px #2196f3 solid;
-    background: black;
-    opacity: 0.6;
+    color:black;
   }
   ${props =>
     props.primary &&

@@ -3,6 +3,19 @@ import axios from 'axios';
 import { Redirect } from 'react-router-dom';
 
 import { Button, Input } from '../assets/css/layer'
+import styled from 'styled-components';
+
+
+const ZipButton = styled(Button)`
+  background-color: rgb(250, 202, 24);
+  border:none;
+  border-radius: 0 3em 3em 0;
+  font-size:1.5em;
+  font-weight:bold;
+  padding:.8em;
+  width:30%;
+`;
+
 
 const zipcodes = ['90280', '90201',
     '90255', '90001',
@@ -30,7 +43,7 @@ class ZipCode extends Component {
 
     //Checking if its qualify  and showing zipcode to user
 
-    checkAge = (e) =>{
+    checkAge = (e) => {
 
     }
 
@@ -63,18 +76,18 @@ class ZipCode extends Component {
     render() {
         return (
             <div className='zipCode'>
-                <h2>Taste the Herb</h2>
+                <h2>Respect the Herb</h2>
                 <h2>Let's get started</h2>
                 <form onSubmit={this.checkZipCode} className='inputContainer'>
-                    <Input label='Enter zipCode' type='text' name='zipcode'
-                        value={this.state.zipcode} onChange={this.inputHandler} maxLength='5' placeholder='ex: 90280' />
-                    <div className='ls-five'>  
-                        <Button type='submit' primary>Submit</Button>
-                    </div>    
-                    
+                    <div class='zipcode-wrapper'>
+                        <div class='zipinput-wrapper'>
+                            <Input label='Enter zipCode' type='text' name='zipcode'
+                                value={this.state.zipcode} onChange={this.inputHandler} maxLength='5' placeholder='Enter your Zipcode...' />
+                        </div>
+                        <ZipButton type='submit' primary>Search</ZipButton>
+                    </div>
                 </form>
                 <h2>{this.state.city}</h2>
-                <h2>{this.state.error}</h2>
                 {this.state.nextpage ? (
                     <Redirect to='/welcome' />
                 ) : null}
