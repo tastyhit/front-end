@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Card, Title, Button } from '../assets/css/layer';
+import { Card, Title, Button } from '../../assets/css/layer';
 import styled, { css } from 'styled-components';
 
 

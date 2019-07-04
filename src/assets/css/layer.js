@@ -32,14 +32,15 @@ export const Input = styled.input`
   border: none;
   padding: 5px 0 8px 15px;
   font-size: 1.5em;
-  color: black;
+  color: white;
   transition: .8s cubic-bezier(.2,.8,.2,1);
   ::placeholder {
     color: grey;
     padding-left: 5px;
   }
   :focus {
-    color:black;
+    color:white;
+    border:none;
   }
   ${props =>
     props.primary &&
