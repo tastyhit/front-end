@@ -7,8 +7,8 @@ const InfoContainer = (props) => {
         <div className='info-container'>
             <Card>
                 <div className='box-title'>
-                    <h1>10'' Bongs Retail - $199</h1>
-                </div>
+                    <h1>10'' Bong retails for $199</h1>
+                </div> 
                 <div className='side-side'>
                     <div className='left-side'>
                         <p>Clumsy</p>
@@ -26,7 +26,7 @@ const InfoContainer = (props) => {
             </Card>
             <Card>
                 <div className='box-title'>
-                    <h1>Pipes Retail - $25</h1>
+                    <h1>Pipe retails for $25</h1>
                 </div>
                 <div className='side-side'>
                     <div className='left-side'>
