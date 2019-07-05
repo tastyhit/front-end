@@ -13,6 +13,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-end;
+    align-content: center;
+    justify-content: center;
     
   }
   
@@ -37,3 +39,22 @@
   .right-side {
     width: 49%;
   }
+
+img{
+    width:100%;
+    height:auto;
+}
+
+.bong-wrapper{
+    display:flex;
+    justify-content: space-evenly;
+    width:100%;
+    align-content: baseline;
+}
+
+.pipe-wrapper{
+    display:flex;
+    justify-content: space-evenly;
+    width:100%;
+    align-content: baseline;
+}
