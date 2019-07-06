@@ -25,6 +25,16 @@ export const Button = styled.button`
     
 `;
 
+export const LetterButton = styled.button`
+  width: 30px;
+  height: 30px;
+  font-size:1.8em;
+  background: #00AAE7;
+  color:white;
+  border: none;
+  font-weight:bold;    
+`;
+
 //Input
 
 export const Input = styled.input`
@@ -64,6 +74,22 @@ export const Card = styled.div`
   font-size:1.5em;
   line-height: 1.7em;
   padding-top:1em;
+
+  ${props =>
+    props.primary &&
+    css`
+    justify-content:baseline;
+    
+    `}
+  ${props =>
+    props.secondary &&
+    css`
+    padding:1em;
+    width:100%;
+    height:auto;
+    justify-content:center;
+    j
+  `}  
 `
 
 
