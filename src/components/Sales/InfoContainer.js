@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Card, LetterButton } from '../../assets/css/layer'
-import styled, { css } from 'styled-components';
+import { Card } from '../../assets/css/layer'
+import styled from 'styled-components';
 
 const SectionCard = styled(Card)`
     height:auto;
@@ -15,22 +15,22 @@ const InfoContainer = (props) => {
     return (
         <div className='info-container'>
             <div class='question-title'>
-                <h1> How do you like to smoke? Select bong or pipe.</h1> 
+                <h1> How do you like to smoke? Select bong or pipe.</h1>
             </div>
-            
-            <div className='selection'> 
-                <div className = 'question-wrapper'>
+
+            <div className='selection'>
+                <div className='question-wrapper'>
                     <SectionCard secondary>
-                        <img src={require('../../assets/images/clip.gif')} />
+                        <img src={require('../../assets/images/clip.gif')} alt='something' />
                     </SectionCard>
                 </div>
             </div>
             <div className='selection'>
                 <div className='question-wrapper'>
                     <SectionCard secondary>
-                        <img src={require('../../assets/images/clipipe.gif')} />
+                        <img src={require('../../assets/images/clipipe.gif')} alt='something' />
                     </SectionCard>
-                    </div>
+                </div>
             </div>
         </div>
     )
