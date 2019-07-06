@@ -1,5 +1,15 @@
 
+.landing{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+
+
 /*Shop and Sign topbar*/
+
 .topbar-wrapper{
   width:100%;
   display: flex;
@@ -20,9 +30,15 @@
 
 /* Title */
 
+.top-header {
+  font-size: 2em;
+  padding-top: 2em;
+}
+
+
 .top-header h1 {
   font-size: 3em;
-  color: black;
+  color: whitesmoke;
   /*text-shadow: 2px 2px black;*/ /*might be better without*/
   cursor: default;
   font-family: "Open Sans";
@@ -64,28 +80,28 @@
 
 .zipCode {
   margin-top:1.2em;
-  height:200px;
+  height:250px;
 }
 
 .zipCode h2 {
-  color: black;
+  color:whitesmoke;
   font-size: 1.7em;
   cursor: default;
 }
 
-.zipCode h2:first-of-type{
-  padding: .5em 0;
-  font-weight: bold;
-  font-size: 3em;
-  color:rgba(0,187,255,0.6)
+.headsub-wrapper {
+  margin-bottom:3em;
+  padding: 0 5em;
 }
 
-.zipCode h2:last-child{
-  padding-top: 1.5em;
+.headsub-wrapper h2 {
+  padding-top:.5em;
+  font-size: 2.3em;
+  color:whitesmoke
 }
 
 .inputContainer {
-  margin-top:1em;
+  margin:1em 0 2em 0;
   display:flex;
   flex-direction: row;
   justify-content: center;
@@ -93,39 +109,7 @@
 }
 
 
-/*Cards*/
 
-.info-container {
-  margin-top:3em;
-  width:100%;
-  display:flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  background: url(../images/background.jpg) repeat;
-}
-
-.box-title h1 {
-  font-family: 'Open Sans';
-  font-size: 1.2em;
-}
-
-.side-side {
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  justify-content: center;
-  margin-top: 1em;
-}
-
-.left-side {
-  border-right: 2px solid #2196f3;
-  width: 49%;
-}
-
-.right-side {
-  width: 49%;
-}
 
 .agecheck-wrapper{
   position: fixed;

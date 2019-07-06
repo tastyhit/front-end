@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
 
-import { Button, Input } from '../assets/css/layer'
+import { Button, Input } from '../../assets/css/layer'
 import styled from 'styled-components';
+import '../../assets/css/landing.css'
 
 
 const ZipButton = styled(Button)`
@@ -76,7 +77,10 @@ class ZipCode extends Component {
     render() {
         return (
             <div className='zipCode'>
-                <h2>Respect the Herb</h2>
+                <div className='headsub-wrapper'>
+                    <h2>Yuck, dirty ass bong hit.</h2>
+                    <h2>Are you smoking tasteless weed thanks to a dirty piece?</h2>
+                </div>
                 <h2>Let's get started</h2>
                 <form onSubmit={this.checkZipCode} className='inputContainer'>
                     <div class='zipcode-wrapper'>

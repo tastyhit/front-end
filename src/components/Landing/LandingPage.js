@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 
 
 import Zipcode from './Zipcode';
-import NavBar from './NavBar';
-import InfoContainer from './InfoContainer';
 import AgeCheck from './AgeCheck';
 
 class Landing extends Component  {
@@ -21,17 +19,14 @@ class Landing extends Component  {
         localStorage.setItem('age', true)
     }
 
-
-
     render(){
         return (
             <div className='landing'>
-                <NavBar />
+                
                 <div className='top-header'>
                     <h1> Tasty Hits</h1>
                 </div>
                 <Zipcode />
-                <InfoContainer />
                 {this.state.agecheck ? (
                     null
                 ):<AgeCheck age={this.ageAlert}/>}
