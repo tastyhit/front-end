@@ -50,7 +50,7 @@ export const Input = styled.input`
   }
   :focus {
     color:white;
-    border:none;
+    outline:none;
   }
   ${props =>
     props.primary &&
