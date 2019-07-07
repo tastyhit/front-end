@@ -38,7 +38,8 @@ class ZipCode extends Component {
             zipcode: '',
             zipcodeList: zipcodes,
             error: '',
-            nextpage: false
+            nextpage: false,
+            rings: false,
         }
     }
 
@@ -62,6 +63,7 @@ class ZipCode extends Component {
 
 
     checkZipCode = (e) => {
+        this.setState({ rings: true })
         e.preventDefault();
 
         if (this.state.zipcodeList.includes(this.state.zipcode)) {
@@ -71,7 +73,6 @@ class ZipCode extends Component {
             alert('Sorry not in the zone')
         }
     }
-
 
 
     render() {
@@ -88,7 +89,15 @@ class ZipCode extends Component {
                             <Input label='Enter zipCode' type='text' name='zipcode'
                                 value={this.state.zipcode} onChange={this.inputHandler} maxLength='5' placeholder='Enter your Zipcode...' />
                         </div>
-                        <ZipButton type='submit' primary>Search</ZipButton>
+                        {this.state.rings ? (
+
+                            <div className='lds-ring'> <div /></div>
+
+
+                        ) : (
+                                <ZipButton type='submit' primary >Search</ZipButton>
+                            )}
+
                     </div>
                 </form>
                 <h2>{this.state.city}</h2>
