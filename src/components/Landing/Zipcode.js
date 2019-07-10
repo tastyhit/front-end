@@ -79,7 +79,7 @@ class ZipCode extends Component {
         return (
             <div className='zipCode'>
                 <div className='headsub-wrapper'>
-                    <h2>Yuck, dirty ass bong hit.</h2>
+                    <h2>Yuck, dirty ass bong hits.</h2>
                     <h2>Are you smoking tasteless weed thanks to a dirty piece?</h2>
                 </div>
                 <h2>Let's get started</h2>
