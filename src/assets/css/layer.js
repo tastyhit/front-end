@@ -65,15 +65,15 @@ export const Card = styled.div`
   width: 300px;
   height: 300px;
   border: 1px solid rgba(0,187,255,0.6);
-  border-radius: .4rem;
+  border-radius: .2em;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  margin: 0 auto 1.3em auto;
+  margin: 0 auto;
   color:#FFFFFF;
   font-size:1.5em;
   line-height: 1.7em;
-  padding-top:1em;
+  padding: 1em;
 
   ${props =>
     props.primary &&
@@ -84,11 +84,10 @@ export const Card = styled.div`
   ${props =>
     props.secondary &&
     css`
-    padding:1em;
-    width:100%;
+    padding-top:2em
+    padding-bottom:2em;
     height:auto;
-    justify-content:center;
-    j
+  
   `}  
 `
 

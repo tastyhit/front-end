@@ -5,31 +5,36 @@ import styled from 'styled-components';
 
 const SectionCard = styled(Card)`
     height:auto;
-    margin-bottom: 0;
     border:none;
+    padding-left:.3em;
+    padding-right:.3em;
 `;
 
 
 
 const InfoContainer = (props) => {
+    function typeClicked(e) {
+        e.preventDefault();
+        console.log(e.getId())
+
+    }
     return (
         <div className='info-container'>
-            <div class='question-title'>
-                <h1> How do you like to smoke? Select bong or pipe.</h1>
+            <div className='question-title'>
+                <h1> How do you like to smoke? *</h1>
             </div>
-
-            <div className='selection'>
-                <div className='question-wrapper'>
-                    <SectionCard secondary>
+            <div className='media-wrapper'>
+                <div className='selection'>
+                    <SectionCard secondary onClick={typeClicked} name='pipe'>
                         <img src={require('../../assets/images/clip.gif')} alt='something' />
                     </SectionCard>
                 </div>
-            </div>
-            <div className='selection'>
-                <div className='question-wrapper'>
-                    <SectionCard secondary>
+                <div className='selection'>
+
+                    <SectionCard secondary onClick={props.b} name='bong'>
                         <img src={require('../../assets/images/clipipe.gif')} alt='something' />
                     </SectionCard>
+
                 </div>
             </div>
         </div>

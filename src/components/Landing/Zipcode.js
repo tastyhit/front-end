@@ -84,19 +84,14 @@ class ZipCode extends Component {
                 </div>
                 <h2>Let's get started</h2>
                 <form onSubmit={this.checkZipCode} className='inputContainer'>
-                    <div class='zipcode-wrapper'>
-                        <div class='zipinput-wrapper'>
+                    <div className='zipcode-wrapper'>
+                        <div className='zipinput-wrapper'>
                             <Input label='Enter zipCode' type='text' name='zipcode'
                                 value={this.state.zipcode} onChange={this.inputHandler} maxLength='5' placeholder='Enter your Zipcode...' />
                         </div>
-                        {this.state.rings ? (
 
-                            <div className='lds-ring'> <div /></div>
+                        <ZipButton type='submit' primary >Search</ZipButton>
 
-
-                        ) : (
-                                <ZipButton type='submit' primary >Search</ZipButton>
-                            )}
 
                     </div>
                 </form>

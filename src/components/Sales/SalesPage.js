@@ -1,20 +1,30 @@
 import React, { Component } from 'react';
-import InfoContainer from './InfoContainer' 
+import InfoContainer from './InfoContainer'
 
 import '../../assets/css/sales.css'
 
 class Sales extends Component {
-    constructor(){
+    constructor() {
         super();
-        this.state ={
-            user: false
+        this.state = {
+            user: false,
+            piece: "",
         }
     }
 
-    render(){
-        return(
+    clickedA = (e) => {
+        e.preventDefault();
+        this.setState({ piece: "A" })
+    }
+    clickedB = (e) => {
+        e.preventDefault();
+        this.setState({ piece: "B" })
+    }
+
+    render() {
+        return (
             <div className='form-wrapper'>
-                <InfoContainer />
+                <InfoContainer a={this.clickedA} b={this.clickedB} />
             </div>
         )
     }
