@@ -13,11 +13,11 @@ class Sales extends Component {
     }
 
     clickedA = (e) => {
-        e.preventDefault();
+
         this.setState({ piece: "A" })
     }
     clickedB = (e) => {
-        e.preventDefault();
+
         this.setState({ piece: "B" })
     }
 

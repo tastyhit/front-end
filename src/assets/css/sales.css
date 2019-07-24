@@ -25,6 +25,7 @@
 
   .question-title{
       margin-bottom: 6em;
+      width:80%;
   }
   
 
@@ -63,3 +64,10 @@ img{
 .selection:active{
     opacity: none;
 }
+
+
+input[type='checkbox'] {
+    display:none;
+   
+}
+
