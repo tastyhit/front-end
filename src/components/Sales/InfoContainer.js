@@ -45,7 +45,6 @@ const InfoContainer = (props) => {
                             <input type="checkbox" name="bong" value="bong" id="survey-question-two" onClick={props.b} />
                             <img src={require('../../assets/images/clipipe.gif')} alt='something' />
                         </label>
-
                     </SectionCard>
 
                 </div>

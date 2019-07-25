@@ -56,9 +56,14 @@ img{
     
 }
 
+
 .selection:hover {
-    
+    cursor: pointer;
     background-color: rgba(0,187,255,0.1)
+}
+
+label  {
+    cursor: pointer;
 }
 
 .selection:active{
