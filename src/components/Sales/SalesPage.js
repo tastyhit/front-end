@@ -44,7 +44,7 @@ class Sales extends Component {
             <div className='form-wrapper'>
                 <InfoContainer a={this.clickedA} b={this.clickedB} />
                 {this.secondQuestion()}
-
+                {"should do something here"}
             </div>
         )
     }
