@@ -25,7 +25,7 @@ class Sales extends Component {
         if (this.state.piece === 'Bong') {
             return (
 
-                <PlanSelction />
+                <div><h1>Hi</h1></div>
 
             )
         } else if (this.state.piece === 'Pipe') {
@@ -44,7 +44,7 @@ class Sales extends Component {
             <div className='form-wrapper'>
                 <InfoContainer a={this.clickedA} b={this.clickedB} />
                 {this.secondQuestion()}
-                {"should do something here"}
+
             </div>
         )
     }

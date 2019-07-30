@@ -57,6 +57,10 @@ img{
     
 }
 
+.selection img {
+    padding: 2em 0;
+}
+
 
 .selection:hover {
     cursor: pointer;

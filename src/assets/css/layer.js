@@ -73,7 +73,6 @@ export const Card = styled.div`
   color:#FFFFFF;
   font-size:1.5em;
   line-height: 1.7em;
-  padding: 1em;
 
   ${props =>
     props.primary &&
@@ -84,8 +83,6 @@ export const Card = styled.div`
   ${props =>
     props.secondary &&
     css`
-    padding-top:2em
-    padding-bottom:2em;
     height:auto;
   
   `}  
