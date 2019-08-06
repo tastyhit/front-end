@@ -39,25 +39,27 @@ export const LetterButton = styled.button`
 
 export const Input = styled.input`
   background: none;
-  border: none;
+  border:none;
+  border-bottom: 1px solid #00AAE7;
+  margin-bottom:1em;
   padding: 5px 0 8px 15px;
   font-size: 1.5em;
   color: white;
   transition: .8s cubic-bezier(.2,.8,.2,1);
   ::placeholder {
-    color: grey;
+    color: #00AAE7;
     padding-left: 5px;
   }
   :focus {
-    color:white;
+    color:#00AAE7;
     outline:none;
+    border:none;
+
   }
   ${props =>
     props.primary &&
     css`
-    width: 80%;
-    font-size: 1.2em;
-    margin: 5px auto;
+    margin-top:2em;
     `}
 `;
 
@@ -87,9 +89,6 @@ export const Card = styled.div`
   
   `}  
 `
-
-
-
 
 export const Form = styled.form`
   display:flex;

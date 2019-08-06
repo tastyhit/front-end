@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import InfoContainer from './InfoContainer'
-import PlanSelction from './PlanSelection'
+import CheckOut from './CheckOut'
 
 import '../../assets/css/sales.css'
 
@@ -8,8 +8,12 @@ class Sales extends Component {
     constructor() {
         super();
         this.state = {
-            user_name: "",
+            name: "",
             piece: "",
+            address: "",
+            email: "",
+            phone: "",
+            id: ""
         }
     }
 
@@ -20,19 +24,17 @@ class Sales extends Component {
         this.setState({ piece: "Pipe", })
     }
 
+    changingState() {
+
+    }
+
     secondQuestion() {
-
-        if (this.state.piece === 'Bong') {
+        if (this.state.piece === 'Bong' || this.state.piece === 'Pipe') {
             return (
-
-                <div><h1>Hi</h1></div>
-
+                <CheckOut />
             )
-        } else if (this.state.piece === 'Pipe') {
-            return (
-                <InfoContainer />
-            )
-        } else {
+        }
+        else {
             return (
                 null
             )

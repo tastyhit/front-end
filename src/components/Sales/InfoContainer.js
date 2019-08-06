@@ -11,8 +11,6 @@ const SectionCard = styled(Card)`
     padding-right:.3em;
 `;
 
-
-
 class InfoContainer extends Component {
     constructor(props) {
         super(props);
@@ -32,7 +30,6 @@ class InfoContainer extends Component {
         }
     }
 
-
     render() {
         return (
             <div className='info-container'>
@@ -40,18 +37,16 @@ class InfoContainer extends Component {
                     <h1> How do you like to smoke? Bong or Pipe *</h1>
                 </div>
                 <div className='media-wrapper'>
-                   
-                        <div className={this.state.piecePicked === 'bong' ? 'hideAway' : 'selection'}>
-                            <SectionCard secondary  >
-                                <label htmlFor="survey-question-one">
-                                    <input type="checkbox" name="bong" value="bong" id="survey-question-one" onClick={this.typeClicked} />
-                                    <img src={require('../../assets/images/clip.gif')} alt='something' />
-                                </label>
-                            </SectionCard>
-                        </div>
-                 
-                   
                     <div className={this.state.piecePicked === 'pipe' ? 'hideAway' : 'selection'}>
+                        <SectionCard secondary  >
+                            <label htmlFor="survey-question-one">
+                                <input type="checkbox" name="bong" value="bong" id="survey-question-one" onClick={this.typeClicked} />
+                                <img src={require('../../assets/images/clip.gif')} alt='something' />
+                            </label>
+                        </SectionCard>
+                    </div>
+
+                    <div className={this.state.piecePicked === 'bong' ? 'hideAway' : 'selection'}>
                         <SectionCard secondary >
                             <label htmlFor="survey-question-two">
                                 <input type="checkbox" name="pipe" value="pipe" id="survey-question-two" onClick={this.typeClicked} />
@@ -64,7 +59,6 @@ class InfoContainer extends Component {
             </div>
         )
     }
-
 }
 
 export default InfoContainer;
