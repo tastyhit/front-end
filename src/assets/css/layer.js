@@ -38,42 +38,57 @@ export const LetterButton = styled.button`
 //Input
 
 export const Input = styled.input`
+  display:flex;
+  margin:0 auto;
+  flex-direction:column;
   background: none;
-  border: none;
+  border:none;
+  border-bottom: 1px solid #00AAE7;
+  margin-bottom:1em;
   padding: 5px 0 8px 15px;
   font-size: 1.5em;
   color: white;
-  transition: .8s cubic-bezier(.2,.8,.2,1);
   ::placeholder {
-    color: grey;
+    color: #00AAE7;
     padding-left: 5px;
   }
   :focus {
-    color:white;
+    color:#00AAE7;
+    outline:none;
     border:none;
+
   }
   ${props =>
     props.primary &&
     css`
-    width: 80%;
-    font-size: 1.2em;
-    margin: 5px auto;
+    margin-top:2em;
     `}
+  ${props =>
+    props.secondary &&
+    css`
+      border:none;
+      margin-bottom:0px;
+      color:white;
+      :focus {
+        color:white;
+    
+      }
+    
+    `} 
 `;
 
 export const Card = styled.div`
   width: 300px;
   height: 300px;
   border: 1px solid rgba(0,187,255,0.6);
-  border-radius: .4rem;
+  border-radius: .2em;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  margin: 0 auto 1.3em auto;
+  margin: 0 auto;
   color:#FFFFFF;
   font-size:1.5em;
   line-height: 1.7em;
-  padding-top:1em;
 
   ${props =>
     props.primary &&
@@ -84,14 +99,10 @@ export const Card = styled.div`
   ${props =>
     props.secondary &&
     css`
-    padding:1em;
-    width:100%;
     height:auto;
-    justify-content:center;
-    j
+  
   `}  
 `
-
 
 export const Form = styled.form`
   display:flex;
@@ -119,6 +130,3 @@ export const Title = styled.h1`
     `}
 `
 
-// @media (max-width:450px){
-//    width:80%;
-//}

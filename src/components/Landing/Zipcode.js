@@ -38,7 +38,8 @@ class ZipCode extends Component {
             zipcode: '',
             zipcodeList: zipcodes,
             error: '',
-            nextpage: false
+            nextpage: false,
+            rings: false,
         }
     }
 
@@ -62,6 +63,7 @@ class ZipCode extends Component {
 
 
     checkZipCode = (e) => {
+        this.setState({ rings: true })
         e.preventDefault();
 
         if (this.state.zipcodeList.includes(this.state.zipcode)) {
@@ -73,22 +75,24 @@ class ZipCode extends Component {
     }
 
 
-
     render() {
         return (
             <div className='zipCode'>
                 <div className='headsub-wrapper'>
-                    <h2>Yuck, dirty ass bong hit.</h2>
+                    <h2>Yuck, dirty ass bong hits.</h2>
                     <h2>Are you smoking tasteless weed thanks to a dirty piece?</h2>
                 </div>
                 <h2>Let's get started</h2>
                 <form onSubmit={this.checkZipCode} className='inputContainer'>
-                    <div class='zipcode-wrapper'>
-                        <div class='zipinput-wrapper'>
-                            <Input label='Enter zipCode' type='text' name='zipcode'
+                    <div className='zipcode-wrapper'>
+                        <div className='zipinput-wrapper'>
+                            <Input secondary label='Enter zipCode' type='text' name='zipcode'
                                 value={this.state.zipcode} onChange={this.inputHandler} maxLength='5' placeholder='Enter your Zipcode...' />
                         </div>
-                        <ZipButton type='submit' primary>Search</ZipButton>
+
+                        <ZipButton type='submit' primary >Search</ZipButton>
+
+
                     </div>
                 </form>
                 <h2>{this.state.city}</h2>
