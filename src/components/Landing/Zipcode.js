@@ -86,7 +86,7 @@ class ZipCode extends Component {
                 <form onSubmit={this.checkZipCode} className='inputContainer'>
                     <div className='zipcode-wrapper'>
                         <div className='zipinput-wrapper'>
-                            <Input label='Enter zipCode' type='text' name='zipcode'
+                            <Input secondary label='Enter zipCode' type='text' name='zipcode'
                                 value={this.state.zipcode} onChange={this.inputHandler} maxLength='5' placeholder='Enter your Zipcode...' />
                         </div>
 

@@ -38,6 +38,9 @@ export const LetterButton = styled.button`
 //Input
 
 export const Input = styled.input`
+  display:flex;
+  margin:0 auto;
+  flex-direction:column;
   background: none;
   border:none;
   border-bottom: 1px solid #00AAE7;
@@ -45,7 +48,6 @@ export const Input = styled.input`
   padding: 5px 0 8px 15px;
   font-size: 1.5em;
   color: white;
-  transition: .8s cubic-bezier(.2,.8,.2,1);
   ::placeholder {
     color: #00AAE7;
     padding-left: 5px;
@@ -61,6 +63,18 @@ export const Input = styled.input`
     css`
     margin-top:2em;
     `}
+  ${props =>
+    props.secondary &&
+    css`
+      border:none;
+      margin-bottom:0px;
+      color:white;
+      :focus {
+        color:white;
+    
+      }
+    
+    `} 
 `;
 
 export const Card = styled.div`
@@ -116,6 +130,3 @@ export const Title = styled.h1`
     `}
 `
 
-// @media (max-width:450px){
-//    width:80%;
-//}

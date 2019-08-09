@@ -24,14 +24,14 @@ class Sales extends Component {
         this.setState({ piece: "Pipe", })
     }
 
-    changingState() {
-
+    changingState = (info) => {
+        console.log(info)
     }
 
     secondQuestion() {
         if (this.state.piece === 'Bong' || this.state.piece === 'Pipe') {
             return (
-                <CheckOut />
+                <CheckOut info={this.changingState} />
             )
         }
         else {
