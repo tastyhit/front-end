@@ -49,11 +49,10 @@ export const Input = styled.input`
   font-size: 1.5em;
   color: white;
   ::placeholder {
-    color: #00AAE7;
+    color: rgb(250,202,24);
     padding-left: 5px;
   }
   :focus {
-    color:#00AAE7;
     outline:none;
     border:none;
 
