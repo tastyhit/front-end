@@ -35,7 +35,7 @@ const AgeCheck = ({ age, google }) => (
     <AgeCard>
       <Title primary>Tasty Hits</Title>
       <div className="text">
-        <p>Discovers the best way to smoke cannabis, clean.</p>
+        <p>Discover the best way to smoke cannabis, clean.</p>
         <p>You must be atleast 21 years of age to view this site.</p>
       </div>
       <WButton onClick={age}>I'M AT LEAST 21 YEARS OLD</WButton>
