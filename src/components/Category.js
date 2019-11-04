@@ -22,7 +22,7 @@ class Category extends Component  {
             <div className='category'>
                 <div>
                   <div>Vendor</div>
-                  <div>Vendee</div>
+                  <div>Vendeee</div>
                 </div>
             </div>
         )
