@@ -17,12 +17,18 @@ class Category extends Component  {
         localStorage.setItem('age', true)
     }
 
+    pathClick = (e) =>{
+
+        //if e target is vendor then go to that page, if the click is vendee then go there
+        this.setState({})
+    }
+
     render(){
         return (
             <div className='category'>
                 <div>
-                  <div>Vendor</div>
-                  <div>Vendeee</div>
+                  <div onClick={this.pathClick}>Vendor</div>
+                  <div onClick={this.pathClick}>Vendeee</div>
                 </div>
             </div>
         )
@@ -30,4 +36,4 @@ class Category extends Component  {
     
 }
 
-export default Category;
+export default Category;    
