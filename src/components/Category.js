@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import '../App.css';
+
 class Category extends Component  {
     constructor(){
         super();
@@ -8,8 +10,7 @@ class Category extends Component  {
             vendee: false
             
         }
-        /*localStorage.clear();*/ //maybe delete
-        localStorage.setItem('path', this.state.agecheck)
+
     }
 
     ageAlert = (e) =>{
@@ -18,7 +19,14 @@ class Category extends Component  {
     }
 
     pathClick = (e) =>{
-
+        console.log(e.target.attributes.name.value)
+        if(e.target.attributes.name.value === 'something'){
+            console.log('something')
+        } else if (e.target.attributes.name.value ==='something1'){
+            console.log('ok')
+        } else {
+            return null
+        }
         //if e target is vendor then go to that page, if the click is vendee then go there
         this.setState({})
     }
@@ -26,9 +34,9 @@ class Category extends Component  {
     render(){
         return (
             <div className='category'>
-                <div>
-                  <div onClick={this.pathClick}>Vendor</div>
-                  <div onClick={this.pathClick}>Vendeee</div>
+                <div className='name1'>
+                  <div name='something' onClick={this.pathClick}>Vendor</div>
+                  <div name='something1' onClick={this.pathClick}>Vendeee</div>
                 </div>
             </div>
         )
