@@ -14,7 +14,6 @@ class Category extends Component  {
     }
 
     pathClick = (e) =>{
-        console.log(e.target.attributes.name.value)
         if(e.target.attributes.name.value === 'something'){
             console.log('something')
         } else if (e.target.attributes.name.value ==='something1'){

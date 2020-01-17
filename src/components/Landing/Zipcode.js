@@ -97,7 +97,7 @@ class ZipCode extends Component {
                 </form>
                 <h2>{this.state.city}</h2>
                 {this.state.nextpage ? (
-                    <Redirect to='/welcome' />
+                    <Redirect push to='/welcome' go={-1}/>
                 ) : null}
             </div>
         )
