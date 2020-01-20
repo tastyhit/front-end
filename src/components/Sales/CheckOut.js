@@ -67,6 +67,7 @@ class CheckOut extends React.Component {
           <Input placeholder='Last Name' type='text' name='lname' onChange={this.addInfo} />
           <Input placeholder='Phone Number' type='text' name='number' onChange={this.addInfo} />
           <Input placeholder='Address' type='text' name='address' onChange={this.addInfo} />
+          
           {this.state.sent ? (
                      <div class="loader"></div> 
                 ):<EnterButton type='submit' onClick={this.sendInfo}> Enter </EnterButton>}
