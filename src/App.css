@@ -5,3 +5,27 @@
   height:100vh;
 
 }
+
+
+
+.category {
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  color:white;
+  width:100%;
+}
+
+
+.options{
+  display:flex;
+  width: 50%;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  height:100%;
+  font-size: 20px;
+  cursor: pointer;
+  border:1px solid white;
+
+}

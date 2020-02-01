@@ -17,7 +17,10 @@ const EnterButton = styled(Button)`
 class CheckOut extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { value: '' };
+    this.state = { 
+      value: '',
+      sent: false
+   };
   }
 
   addInfo = e => {
@@ -35,11 +38,26 @@ class CheckOut extends React.Component {
 
   sendInfo = (e) => {
     e.preventDefault();
-    let name = this.state.fname + this.state.lname
+    let templateId = 'template_bhxhQxe2'
+    let name = this.state.fname + " " + this.state.lname
     console.log(name)
-    let info = [name, this.state.number, this.state.address]
+    let info = `Name: ${name} <br> Number: ${this.state.number} <br> Address: ${this.state.address}`
     this.props.info(info)
+    this.setState({sent: true})
+    this.sendFeedback(templateId, {message_html: info,to_name:'Tastyyy', from_name: name, reply_to: 'victorgordian103@gmail.com'})
   }
+
+  sendFeedback (templateId, variables) {
+    window.emailjs.send(
+      'gmail', templateId,
+      variables
+      ).then(res => {
+        console.log('Email successfully sent!')
+        this.setState({sent: false})
+      })
+      // Handle errors here however you like, or use a React error boundary
+      .catch(err => console.error('Oh well, you failed. Here some thoughts on the error that occured:', err))
+    }
 
   render() {
     return (
@@ -49,7 +67,11 @@ class CheckOut extends React.Component {
           <Input placeholder='Last Name' type='text' name='lname' onChange={this.addInfo} />
           <Input placeholder='Phone Number' type='text' name='number' onChange={this.addInfo} />
           <Input placeholder='Address' type='text' name='address' onChange={this.addInfo} />
-          <EnterButton type='submit' onClick={this.sendInfo}> Enter </EnterButton>
+          
+          {this.state.sent ? (
+                     <div class="loader"></div> 
+                ):<EnterButton type='submit' onClick={this.sendInfo}> Enter </EnterButton>}
+          
         </form>
       </div>
     )
