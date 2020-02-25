@@ -41,7 +41,7 @@ class WebSite extends Component  {
         return (
             <div className='webpage wb1'>
                 <div className='top-bar'>
-                    <div class='topBar-left'>
+                    <div className='topBar-left'>
                         <h1>Tasty Hits</h1>
                         <img src={logo} alt='Logo' className='yellow' />
                     </div>
