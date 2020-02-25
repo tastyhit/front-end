@@ -3,19 +3,19 @@ import styled, { css } from 'styled-components';
 //Button
 
 export const Button = styled.button`
+    border:0;
     background: transparent;
     border-radius: 0.2em;
-    border: 2px solid #00AAE7;
     color:#00AAE7;
     padding: 1.2em;
     cursor: pointer;
-    font-weight:400;
+    font-weight:600;
     line-height:1.4rem;
-    font-size:1em;
+    font-size:1.6em;
     width:100%;
     text-transform: uppercase;
     letter-spacing: 0.03em;
-
+    
     ${props =>
     props.primary &&
     css`
@@ -129,3 +129,20 @@ export const Title = styled.h1`
     `}
 `
 
+
+
+
+
+/** from button with blue
+ * background: transparent;
+border-radius: 0.2em;
+border: 2px solid #00AAE7;
+color:#00AAE7;
+padding: 1.2em;
+cursor: pointer;
+font-weight:400;
+line-height:1.4rem;
+font-size:1em;
+width:100%;
+text-transform: uppercase;
+letter-spacing: 0.03em; **/
