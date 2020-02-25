@@ -42,10 +42,10 @@ class WebSite extends Component  {
             <div className='webpage wb1'>
                 <div className='top-bar'>
                     <div class='topBar-left'>
-                        {width > 800 ? <h1>Tasyt Hits</h1> : <h1>TH</h1>}                     
+                        <h1>Tasty Hits</h1>
                         <img src={logo} alt='Logo' className='yellow' />
                     </div>
-                    {width > 768 ? <NavBar /> : <div className='mobile-menu'> <img src={menu} alt='menu' /></div>}    
+                    {width > 800 ? <NavBar /> : <div className='mobile-menu'> <img src={menu} alt='menu' /></div>}    
                 </div>
                 <div className='zipcode-section' >
                 <ZipCode />
