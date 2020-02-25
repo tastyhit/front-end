@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import logo from '../../assets/images/flower2.png'
+import logo from '../../assets/images/flower2.png';
+import menu from '../../assets/images/menu.png';
 import NavBar from './NavBar';
 import '../../assets/css/landing.css'
 import ZipCode from '../Landing/Zipcode';
+import AgeCheck from '../Landing/AgeCheck'
 
 class WebSite extends Component  {
     constructor(){
@@ -26,20 +28,31 @@ class WebSite extends Component  {
         this.setState({})
     }
 
+    ageAlert = (e) =>{
+        this.setState({agecheck: true})
+        localStorage.setItem('age', true)
+    }
+
+    
+
+
     render(){
+        let width = window.innerWidth;
         return (
             <div className='webpage wb1'>
                 <div className='top-bar'>
                     <div class='topBar-left'>
-                        <h1>Tasty Hits</h1>
+                        {width > 800 ? <h1>Tasyt Hits</h1> : <h1>TH</h1>}                     
                         <img src={logo} alt='Logo' className='yellow' />
                     </div>
-                    <NavBar />     
+                    {width > 768 ? <NavBar /> : <div className='mobile-menu'> <img src={menu} alt='menu' /></div>}    
                 </div>
                 <div className='zipcode-section' >
                 <ZipCode />
                 </div>
-                
+                {this.state.agecheck ? (
+                    null
+                ):<AgeCheck age={this.ageAlert}/>}
             </div> 
             
         )

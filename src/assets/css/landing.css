@@ -45,6 +45,8 @@
   margin-left: 35px;
 }
 
+
+
 .yellow{
   width:120px;
   height:120px;
@@ -101,6 +103,10 @@
   cursor: default;
   font-family: "Open Sans";
   font-weight: bold;
+}
+
+.hide{
+  display:none;
 }
 
 /*Lets get started*/
@@ -208,3 +214,33 @@
   margin-top: 150px;
 }
 
+
+
+/*mobile menu*/
+
+.mobile-menu{
+  width: 50px;
+  height: 50px;
+}
+
+
+@media only screen and (max-width: 800px){
+
+  .top-bar{
+    height:80px;
+  }
+  .topBar-left{
+    width:60%;
+  }
+  .topBar-left h1{
+    margin-left: 30%;
+  }
+
+  .yellow{
+    width: 80px;
+    height: 80px;
+  }
+  .mobile-menu{
+    margin-right: 15px;
+  }
+}
