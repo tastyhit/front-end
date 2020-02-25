@@ -5,18 +5,22 @@ import { Redirect } from 'react-router-dom';
 import { Button, Input } from '../../assets/css/layer'
 import styled from 'styled-components';
 import '../../assets/css/landing.css'
-
+import addy from '../../assets/images/addyicon.png'
 
 const ZipButton = styled(Button)`
-  background-color: rgb(250, 202, 24);
+  background-color: rgb(255, 195, 0);
   border:none;
   border-radius: 0 3em 3em 0;
   font-size:1.5em;
   font-weight:bold;
   padding:.8em;
   width:40%;
-  color:#00AAE7;
-  
+  color:white;
+  @media(max-width: 800px){
+      margin-top:1em;
+      width:100%;
+      border-radius: 3em;
+  }
 `;
 
 
@@ -85,18 +89,19 @@ class ZipCode extends Component {
         return (
             <div className='zipCode'>
                 <div className='headsub-wrapper'>
-                    <h2>Yuck, dirty ass bong hits.</h2>
-                    <h2>Are you smoking tasteless weed thanks to a dirty piece?</h2>
+                    <h2>Discover the </h2>
+                    <h2>taste of your herb</h2>
                 </div>
                 <h2>Let's get started</h2>
                 <form onSubmit={this.checkZipCode} className='inputContainer'>
                     <div className='zipcode-wrapper'>
                         <div className='zipinput-wrapper'>
+                            <img src={addy} alt='address' className='address-icon' />
                             <Input secondary label='Enter zipCode' type='text' name='zipcode'
                                 value={this.state.zipcode} onChange={this.inputHandler} maxLength='5' placeholder='Enter your Zipcode...' />
                         </div>
 
-                        <ZipButton type='submit' primary >Sign Up</ZipButton>
+                        <ZipButton type='submit' >Sign Up</ZipButton>
 
 
                     </div>
