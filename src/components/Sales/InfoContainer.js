@@ -24,9 +24,12 @@ class InfoContainer extends Component {
         if (vale === "pipe") {
             this.setState({ piecePicked: "pipe" })
             this.props.b(e)
-        } else {
+        } else if (vale ==='bong') {
             this.props.a(e)
             this.setState({ piecePicked: "bong" })
+        } else{
+            this.props.c(e)
+            this.setState({piecePicked: 'both'})
         }
     }
 
@@ -37,7 +40,7 @@ class InfoContainer extends Component {
                     <h1> How do you like to smoke? Bong or Pipe *</h1>
                 </div>
                 <div className='media-wrapper'>
-                    <div className={this.state.piecePicked === 'pipe' ? 'hideAway' : 'selection'}>
+                    <div className={this.state.piecePicked === 'pipe' ? 'hideAway' : this.state.piecePicked === 'both' ? 'selection' : 'selection'}>
                         <SectionCard secondary  >
                             <label htmlFor="survey-question-one">
                                 <input type="checkbox" name="bong" value="bong" id="survey-question-one" onClick={this.typeClicked} />
@@ -45,8 +48,8 @@ class InfoContainer extends Component {
                             </label>
                         </SectionCard>
                     </div>
-
-                    <div className={this.state.piecePicked === 'bong' ? 'hideAway' : 'selection'}>
+                    {/*if piecePicked is bong then hideaway else if piecepicked is both do nothing else be selection*/}
+                    <div className={this.state.piecePicked === 'bong' ? 'hideAway' : this.state.piecePicked === 'both' ? 'selection' : 'selection'}>
                         <SectionCard secondary >
                             <label htmlFor="survey-question-two">
                                 <input type="checkbox" name="pipe" value="pipe" id="survey-question-two" onClick={this.typeClicked} />
@@ -55,6 +58,20 @@ class InfoContainer extends Component {
                         </SectionCard>
 
                     </div>
+                    {
+                        this.state.piecePicked ==='both' ? console.log('hi') : <div className={this.state.piecePicked === 'bong' ? 'hideAway' : this.state.piecePicked === 'pipe' ? 'hideAway' :'selection'}>
+                        <SectionCard secondary>
+                            <div>
+                            <label htmlFor='survey-question-three'>
+                                <input type='checkbox' name='both' value='both' id='survey-question-three' onClick={this.typeClicked}/>
+                                <h1> Both</h1>
+                            </label>
+                            </div>
+                        </SectionCard>
+                        </div>
+                    }
+                    
+                    
                 </div>
             </div>
         )
