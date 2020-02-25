@@ -14,7 +14,9 @@ const ZipButton = styled(Button)`
   font-size:1.5em;
   font-weight:bold;
   padding:.8em;
-  width:30%;
+  width:40%;
+  color:#00AAE7;
+  
 `;
 
 
@@ -76,6 +78,10 @@ class ZipCode extends Component {
 
 
     render() {
+        if(this.state.nextpage){
+            return <Redirect push to='welcome' />
+        }
+        
         return (
             <div className='zipCode'>
                 <div className='headsub-wrapper'>
@@ -90,15 +96,13 @@ class ZipCode extends Component {
                                 value={this.state.zipcode} onChange={this.inputHandler} maxLength='5' placeholder='Enter your Zipcode...' />
                         </div>
 
-                        <ZipButton type='submit' primary >Search</ZipButton>
+                        <ZipButton type='submit' primary >Sign Up</ZipButton>
 
 
                     </div>
                 </form>
                 <h2>{this.state.city}</h2>
-                {this.state.nextpage ? (
-                    <Redirect push to='/welcome' go={-1}/>
-                ) : null}
+                
             </div>
         )
     }
