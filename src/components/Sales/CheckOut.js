@@ -19,33 +19,65 @@ class CheckOut extends React.Component {
     super(props);
     this.state = { 
       value: '',
-      sent: false
+      sent: false,
+      formErrors: {fname:'', lname:'', number:'', email:'' },
+      emailValid: false,
+      formValid: false
    };
   }
 
   addInfo = e => {
-    this.setState({ value: e.target.value })
-    if (e.target.name === 'fname') {
-      this.setState({ fname: e.target.value })
-    } else if (e.target.name === 'lname') {
-      this.setState({ lname: e.target.value })
-    } else if (e.target.name === 'number') {
-      this.setState({ number: e.target.value })
-    } else if (e.target.name === 'address') {
-      this.setState({ address: e.target.value })
-    }
+    
+    const name = e.target.name;
+    const value = e.target.value;
+    this.setState({[name]: value},
+      () => { this.validateField(name, value) });
+      console.log(this.state.formValid)  
+    // if (e.target.name === 'fname') {
+    //   this.setState({ fname: e.target.value })
+    // } else if (e.target.name === 'lname') {
+    //   this.setState({ lname: e.target.value })
+    // } else if (e.target.name === 'number') {
+    //   this.setState({ number: e.target.value })
+    // } else if (e.target.name === 'address') {
+    //   this.setState({ address: e.target.value })
+    // }
   }
+
+  validateField(fieldName, value){
+    let fieldValidationErrors  = this.state.formErrors;
+    let emailValid = this.state.emailValid;
+    let fname = this.state.fname;
+    
+    switch(fieldName){
+      case 'email':
+        emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
+        fieldValidationErrors.email = emailValid ? '' : ' is invalid';
+        break;
+      case 'fname':
+        fname = value.length >= 0;
+        fieldValidationErrors.fname = fname ? '': 'First Name required';
+        break;
+      default:
+        break;  
+
+    }
+    this.setState({formErrors: fieldValidationErrors, emailValid: emailValid}, this.validateForm)
+  }
+
 
   sendInfo = (e) => {
     e.preventDefault();
-    let templateId = 'template_bhxhQxe2'
-    let name = this.state.fname + " " + this.state.lname
-    console.log(name)
-    let info = `Name: ${name} <br> Number: ${this.state.number} <br> Address: ${this.state.address}`
-    this.props.info(info)
-    this.setState({sent: true})
-    this.sendFeedback(templateId, {message_html: info,to_name:'Tastyyy', from_name: name, reply_to: 'victorgordian103@gmail.com'})
+    console.log("sent")
+    // let templateId = 'template_bhxhQxe2'
+    // let name = this.state.fname + " " + this.state.lname
+    // console.log(name)
+    // let info = `Name: ${name} <br> Number: ${this.state.number} <br> Address: ${this.state.address}`
+    // this.props.info(info)
+    // this.setState({sent: true})
+    // this.sendFeedback(templateId, {message_html: info,to_name:'Tastyyy', from_name: name, reply_to: 'victorgordian103@gmail.com'})
   }
+
 
   sendFeedback (templateId, variables) {
     window.emailjs.send(
@@ -58,21 +90,26 @@ class CheckOut extends React.Component {
       // Handle errors here however you like, or use a React error boundary
       .catch(err => console.error('Oh well, you failed. Here some thoughts on the error that occured:', err))
     }
+  
+
 
   render() {
     return (
       <div className='contactInfo'>
         <form className='contactForm'>
-          <div className='name'>
-          <Input primary placeholder='First Name' type='text' name='fname' onChange={this.addInfo} />
-          <Input primary placeholder='Last Name' type='text' name='lname' onChange={this.addInfo} />
+          <div>
+            <FormErrors formErrors={this.state.formErrors} />
           </div>
-          <Input primary placeholder='Phone Number' type='text' name='number' onChange={this.addInfo} />
-          <Input primary placeholder='Email' type='text' name='email' onChange={this.addInfo} />
+          <div className='name'>
+          <Input primary placeholder='First Name' type='text' name='fname' required="required" onChange={this.addInfo} />
+          <Input primary placeholder='Last Name' type='text' name='lname' required="required"  onChange={this.addInfo} />
+          </div>
+          <Input primary placeholder='Phone Number' type='text' required="required" name='number' onChange={this.addInfo} />
+          <Input primary placeholder='Email' type='text' name='email' required="required" onChange={this.addInfo} />
           
           {this.state.sent ? (
                      <div class="loader"></div> 
-                ):<EnterButton type='submit' onClick={this.sendInfo}> Enter </EnterButton>}
+                ):<EnterButton type='submit' disable={!this.state.formValid} > Enter </EnterButton>}
           
         </form>
       </div>
@@ -80,5 +117,18 @@ class CheckOut extends React.Component {
   }
 
 }
+
+const FormErrors = ({formErrors}) =>
+  <div>
+    {Object.keys(formErrors).map((fieldName, i) =>{
+      if(formErrors[fieldName].length > 0){
+        return(
+        <p key={i}>{fieldName}{formErrors[fieldName]}</p>
+        )
+      }else {
+        return '';
+      }
+    })}
+  </div>
 
 export default CheckOut;
