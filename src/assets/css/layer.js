@@ -48,6 +48,7 @@ export const Input = styled.input`
   font-size: 2em;
   letter-spacing:1px;
   color: black;
+  padding-left:2px;
   ::placeholder {
     color: grey;
 
@@ -73,8 +74,10 @@ export const Input = styled.input`
       border:none;
       margin-bottom:0px;
       color:black;
+      border:none;
       :focus {
-        color:black;
+        border:none;
+        color:none;
     
       }
     

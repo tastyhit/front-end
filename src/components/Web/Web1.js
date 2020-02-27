@@ -5,6 +5,7 @@ import NavBar from './NavBar';
 import '../../assets/css/landing.css'
 import ZipCode from '../Landing/Zipcode';
 import AgeCheck from '../Landing/AgeCheck'
+import { Link } from 'react-router-dom';
 
 class WebSite extends Component  {
     constructor(){
@@ -50,6 +51,7 @@ class WebSite extends Component  {
                 <div className='zipcode-section' >
                 <ZipCode />
                 </div>
+                {width > 800 ? null : <div className='login-mobile'><h1>Already have an account? </h1><Link> Log In</Link></div>}
                 {this.state.agecheck ? (
                     null
                 ):<AgeCheck age={this.ageAlert}/>}
