@@ -38,7 +38,18 @@
   }
 }
 
+@media only screen and (max-width: 800px){
+  .name{
+    flex-direction: column;
+  }
 
+  .contactForm{
+    width:90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
 
 /*Loader*/
 
