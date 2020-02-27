@@ -139,6 +139,16 @@
   background-color: whitesmoke;
 }
 
+.zipinput-wrapper input{
+  border: none;
+  margin-bottom: 0px;
+
+}
+
+.zipinput-wrapper input:focus{
+  border: none;
+}
+
 .zipCode {
   margin-top:.5em;
   height:250px;
