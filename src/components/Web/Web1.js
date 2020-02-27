@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from '../../assets/images/flower2.png';
+import logo from '../../assets/images/Finalicon.png';
 import menu from '../../assets/images/menu.png';
 import NavBar from './NavBar';
 import '../../assets/css/landing.css'

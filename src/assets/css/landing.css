@@ -49,8 +49,8 @@
 
 
 .yellow{
-  width:120px;
-  height:120px;
+  width:45px;
+  height:90px;
 }
 
 .navbar-wrapper{
@@ -279,8 +279,9 @@
   }
 
   .yellow{
-    width: 80px;
-    height: 80px;
+    width: 25px;
+    height: 50px;
+    margin-right:45px;
   }
   .mobile-menu{
     margin-right: 15px;
