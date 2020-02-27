@@ -221,6 +221,30 @@
   margin-top: 100px;
 }
 
+.login-mobile{
+  margin-top:80px;
+  color:white;
+  font-size: 1.6em;
+  display:flex;
+  flex-direction: row;
+  align-self: center;
+
+}
+
+.login-mobile h1{
+  margin-right: 7px;;
+}
+.login-mobile a{
+  text-decoration: none;
+}
+
+.login-mobile a:link{
+  color:white;
+}
+
+.login-mobile a:visited{
+  color:white;
+}
 
 
 /*mobile menu*/

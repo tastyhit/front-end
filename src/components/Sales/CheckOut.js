@@ -22,6 +22,7 @@ class CheckOut extends React.Component {
       sent: false,
       formErrors: {fname:'', lname:'', number:'', email:'' },
       emailValid: false,
+      numberValid: false,
       formValid: false
    };
   }
@@ -31,38 +32,28 @@ class CheckOut extends React.Component {
     const name = e.target.name;
     const value = e.target.value;
     this.setState({[name]: value},
-      () => { this.validateField(name, value) });
-      console.log(this.state.formValid)  
-    // if (e.target.name === 'fname') {
-    //   this.setState({ fname: e.target.value })
-    // } else if (e.target.name === 'lname') {
-    //   this.setState({ lname: e.target.value })
-    // } else if (e.target.name === 'number') {
-    //   this.setState({ number: e.target.value })
-    // } else if (e.target.name === 'address') {
-    //   this.setState({ address: e.target.value })
-    // }
+      () => { this.validateField(name, value) }); 
   }
 
   validateField(fieldName, value){
     let fieldValidationErrors  = this.state.formErrors;
     let emailValid = this.state.emailValid;
-    let fname = this.state.fname;
+    let numberValid = this.state.numberValid;
     
     switch(fieldName){
       case 'email':
         emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
         fieldValidationErrors.email = emailValid ? '' : ' is invalid';
         break;
-      case 'fname':
-        fname = value.length >= 0;
-        fieldValidationErrors.fname = fname ? '': 'First Name required';
+      case 'number':
+        numberValid = value.length > 10;
+        fieldValidationErrors.number = numberValid ? '': ' is to short';
         break;
       default:
         break;  
 
     }
-    this.setState({formErrors: fieldValidationErrors, emailValid: emailValid}, this.validateForm)
+    this.setState({formErrors: fieldValidationErrors, emailValid: emailValid, numberValid:numberValid}, this.validateForm)
   }
 
 
@@ -104,7 +95,7 @@ class CheckOut extends React.Component {
           <Input primary placeholder='First Name' type='text' name='fname' required="required" onChange={this.addInfo} />
           <Input primary placeholder='Last Name' type='text' name='lname' required="required"  onChange={this.addInfo} />
           </div>
-          <Input primary placeholder='Phone Number' type='text' required="required" name='number' onChange={this.addInfo} />
+          <Input primary placeholder='Phone Number' type='text' required="required" name='number' maxLength='10' onChange={this.addInfo} />
           <Input primary placeholder='Email' type='text' name='email' required="required" onChange={this.addInfo} />
           
           {this.state.sent ? (
