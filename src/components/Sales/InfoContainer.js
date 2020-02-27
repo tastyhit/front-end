@@ -59,16 +59,14 @@ class InfoContainer extends Component {
 
                     </div>
                     {
-                        this.state.piecePicked ==='both' ? console.log('hi') : <div className={this.state.piecePicked === 'bong' ? 'hideAway' : this.state.piecePicked === 'pipe' ? 'hideAway' :'selection'}>
-                        <SectionCard secondary>
-                            <div>
+                     this.state.piecePicked ==='both' ? null : <div className={this.state.piecePicked === 'bong' ? 'hideAway' : this.state.piecePicked === 'pipe' ? 'hideAway' :'selection2'}>
+                        <SectionCard primary>
                             <label htmlFor='survey-question-three'>
                                 <input type='checkbox' name='both' value='both' id='survey-question-three' onClick={this.typeClicked}/>
                                 <h1> Both</h1>
                             </label>
-                            </div>
                         </SectionCard>
-                        </div>
+                    </div>
                     }
                     
                     

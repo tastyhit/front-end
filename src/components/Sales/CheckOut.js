@@ -63,10 +63,12 @@ class CheckOut extends React.Component {
     return (
       <div className='contactInfo'>
         <form className='contactForm'>
+          <div className='name'>
           <Input primary placeholder='First Name' type='text' name='fname' onChange={this.addInfo} />
-          <Input placeholder='Last Name' type='text' name='lname' onChange={this.addInfo} />
-          <Input placeholder='Phone Number' type='text' name='number' onChange={this.addInfo} />
-          <Input placeholder='Address' type='text' name='address' onChange={this.addInfo} />
+          <Input primary placeholder='Last Name' type='text' name='lname' onChange={this.addInfo} />
+          </div>
+          <Input primary placeholder='Phone Number' type='text' name='number' onChange={this.addInfo} />
+          <Input primary placeholder='Email' type='text' name='email' onChange={this.addInfo} />
           
           {this.state.sent ? (
                      <div class="loader"></div> 

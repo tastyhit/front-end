@@ -6,7 +6,7 @@ export const Button = styled.button`
     border:0;
     background: transparent;
     border-radius: 0.2em;
-    color:#00AAE7;
+    color:black;
     padding: 1.2em;
     cursor: pointer;
     font-weight:600;
@@ -38,33 +38,34 @@ export const LetterButton = styled.button`
 //Input
 
 export const Input = styled.input`
-  width:80%;
   display:flex;
   margin:0 auto;
   flex-direction:column;
   background: none;
   border:none;
-  border-bottom: 1px solid #00AAE7;
+  border-bottom: 2px solid rgb(255, 195, 0);
   margin-bottom:1em;
-  padding: 5px 0 8px 15px;
   font-size: 2em;
   letter-spacing:1px;
-  color: white;
+  color: black;
   ::placeholder {
     color: grey;
-    padding-left: 5px;
+
     
 
   }
   :focus {
     outline:none;
-    border:none;
+    border-bottom: 2px solid black;
 
   }
   ${props =>
     props.primary &&
     css`
-    margin-top:2em;
+    color:black
+    ::placeholder{
+      color:black;
+    }
     `}
   ${props =>
     props.secondary &&
