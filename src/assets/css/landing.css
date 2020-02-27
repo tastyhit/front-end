@@ -71,6 +71,10 @@
   border-right: 2px solid #00AAE7;
 }
 
+.top-bar .box2{
+  border-right: none;
+}
+
 .top-bar .link {
   width: 100%;
   
@@ -84,7 +88,7 @@
 
 .top-bar .link button:hover {
 
-    color: rgb(255, 195, 0);
+    color: black;
     
   }
 
@@ -108,7 +112,7 @@
 
 /*Lets get started*/
 .zipcode-wrapper{
-  max-width:40em;
+  max-width:45em;
   width:100%;
   display:flex;
   justify-content: center;
