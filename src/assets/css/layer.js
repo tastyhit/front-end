@@ -39,18 +39,16 @@ export const LetterButton = styled.button`
 
 export const Input = styled.input`
   display:flex;
-  margin:0 auto;
   flex-direction:column;
   background: none;
   border:none;
   border-bottom: 2px solid rgb(255, 195, 0);
-  margin-bottom:1em;
   font-size: 2em;
   letter-spacing:1px;
   color: black;
   padding-left:2px;
   ::placeholder {
-    color: grey;
+    color: dimgray;
 
     
 
@@ -64,8 +62,10 @@ export const Input = styled.input`
     props.primary &&
     css`
     color:black
+    margin:0 auto;
+    margin-bottom:1em;
     ::placeholder{
-      color:black;
+
     }
     `}
   ${props =>
@@ -75,6 +75,7 @@ export const Input = styled.input`
       margin-bottom:0px;
       color:black;
       border:none;
+      margin-bottom:1em;
       :focus {
         border:none;
         color:none;

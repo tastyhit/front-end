@@ -27,6 +27,38 @@
   margin: 0 auto;
 }
 
+.phone {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  margin-bottom: 1.5em ;
+}
+
+.phone h1 {
+  padding-left:5px;
+  font-size:2em;
+  color:black;
+}
+
+.phone img {
+  width: 30px;
+  height: 20px;
+}
+
+.usphone{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  right:30px
+  
+}
+
+.phone input{
+  position: relative;
+  right:30px
+}
 
 @media only screen and (max-width: 600px){
   .contactForm input{
@@ -42,6 +74,15 @@
   .name{
     flex-direction: column;
   }
+
+  .usphone{
+    position: static;
+  }
+  
+  .phone input{
+    position: static;
+  }
+
 
   .contactForm{
     width:90%;

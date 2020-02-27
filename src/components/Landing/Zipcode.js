@@ -97,7 +97,7 @@ class ZipCode extends Component {
                     <div className='zipcode-wrapper'>
                         <div className='zipinput-wrapper'>
                             <img src={addy} alt='address' className='address-icon' />
-                            <Input secondary label='Enter zipCode' type='text' name='zipcode'
+                            <Input primary label='Enter zipCode' type='text' name='zipcode'
                                 value={this.state.zipcode} onChange={this.inputHandler} maxLength='5' placeholder='Enter your Zipcode...' />
                         </div>
 

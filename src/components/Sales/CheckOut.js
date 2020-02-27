@@ -3,7 +3,7 @@ import React from 'react';
 import { Input, Button } from '../../assets/css/layer'
 import styled from 'styled-components';
 import '../../assets/css/checkout.css'
-
+import USicon from '../../assets/images/usa-icon.jpg'
 const EnterButton = styled(Button)`
   background-color: rgb(250, 202, 24);
   border:none;
@@ -88,14 +88,21 @@ class CheckOut extends React.Component {
     return (
       <div className='contactInfo'>
         <form className='contactForm'>
-          <div>
+          <div className='form-errors'>
             <FormErrors formErrors={this.state.formErrors} />
           </div>
           <div className='name'>
           <Input primary placeholder='First Name' type='text' name='fname' required="required" onChange={this.addInfo} />
           <Input primary placeholder='Last Name' type='text' name='lname' required="required"  onChange={this.addInfo} />
           </div>
-          <Input primary placeholder='Phone Number' type='text' required="required" name='number' maxLength='10' onChange={this.addInfo} />
+          <div className='phone'>
+            <div className='usphone'>
+              <img src={USicon} alt='usicon' className='usicon'/>
+              <h1> +1</h1>  
+            </div>
+         
+          <Input  placeholder='Phone Number' type='text' required="required" name='number' maxLength='10' onChange={this.addInfo} />
+          </div>
           <Input primary placeholder='Email' type='text' name='email' required="required" onChange={this.addInfo} />
           
           {this.state.sent ? (
