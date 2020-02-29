@@ -35,7 +35,6 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
   width:50%;
   
 }
@@ -51,6 +50,7 @@
 .yellow{
   width:45px;
   height:90px;
+  margin-left:20px;
 }
 
 .navbar-wrapper{
@@ -95,20 +95,15 @@
 
 /* Title */
 
-.top-header {
-  font-size: 2em;
-  padding-top: 2em;
-}
-
-
-.top-header h1 {
-  font-size: 3em;
-  color: whitesmoke;
-  /*text-shadow: 2px 2px black;*/ /*might be better without*/
+.title{
+  font-size: 7em ;
+  color:whitesmoke;
   cursor: default;
   font-family: "Open Sans";
   font-weight: bold;
+  margin-top:70px;
 }
+
 
 /*Lets get started*/
 .zipcode-wrapper{
@@ -116,7 +111,6 @@
   width:100%;
   display:flex;
   justify-content: center;
-
   border-radius: 3em;
   
 }
@@ -225,10 +219,12 @@
   padding-bottom: 1em;
 }
 
+
+
 /*zipcode part*/
 
 .zipcode-section{
-  margin-top: 100px;
+  margin-top: 30px;
 }
 
 .login-mobile{
@@ -272,17 +268,13 @@
   }
   .topBar-left{
     width:60%;
+    justify-content: flex-end;
+    margin-left: 0px;
+  
     
   }
-  .topBar-left h1{
-    font-size: 3em;
-  }
 
-  .yellow{
-    width: 25px;
-    height: 50px;
-    margin-right:45px;
-  }
+ 
   .mobile-menu{
     margin-right: 15px;
   }
@@ -296,5 +288,12 @@
     border:solid 1px rgba(0, 187, 255, 0.6);
     border-radius:3em;
     height:50px;
+  }
+
+  .yellow{
+    width:30px;
+    height:60px;
+    margin-left:0px;
+    margin-right:35px;
   }
 }

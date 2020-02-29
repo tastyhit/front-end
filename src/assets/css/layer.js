@@ -6,7 +6,7 @@ export const Button = styled.button`
     border:0;
     background: transparent;
     border-radius: 0.2em;
-    color:black;
+    color:jade;
     padding: 1.2em;
     cursor: pointer;
     font-weight:600;
@@ -19,7 +19,7 @@ export const Button = styled.button`
     ${props =>
     props.primary &&
     css`
-        color:white;
+        color:whitesmoke;
         background: #00AAE7;
       `}
     
