@@ -4,6 +4,7 @@ import { Input, Button } from '../../assets/css/layer'
 import styled from 'styled-components';
 import '../../assets/css/checkout.css'
 import USicon from '../../assets/images/usa-icon.jpg'
+
 const EnterButton = styled(Button)`
   background-color: rgb(250, 202, 24);
   border:none;
@@ -19,15 +20,17 @@ class CheckOut extends React.Component {
     super(props);
     this.state = { 
       value: '',
-      sent: false,
-      formErrors: {fname:'', lname:'', number:'', email:'' },
+      sentEmail: false,
+      formErrors: { number:'', email:'' },
       emailValid: false,
       numberValid: false,
-      formValid: false
+      formValid: false,
+      loader: false
+
    };
   }
 
-  addInfo = e => {
+  handleUserInput = e => {
     
     const name = e.target.name;
     const value = e.target.value;
@@ -46,7 +49,7 @@ class CheckOut extends React.Component {
         fieldValidationErrors.email = emailValid ? '' : ' is invalid';
         break;
       case 'number':
-        numberValid = value.length > 10;
+        numberValid = value.length > 9;
         fieldValidationErrors.number = numberValid ? '': ' is to short';
         break;
       default:
@@ -56,17 +59,28 @@ class CheckOut extends React.Component {
     this.setState({formErrors: fieldValidationErrors, emailValid: emailValid, numberValid:numberValid}, this.validateForm)
   }
 
+  validateForm(){
+    this.setState({formValid: this.state.emailValid && this.state.numberValid});
+  }
+
+  capitlize(str){
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
 
   sendInfo = (e) => {
     e.preventDefault();
-    console.log("sent")
-    // let templateId = 'template_bhxhQxe2'
-    // let name = this.state.fname + " " + this.state.lname
-    // console.log(name)
-    // let info = `Name: ${name} <br> Number: ${this.state.number} <br> Address: ${this.state.address}`
-    // this.props.info(info)
-    // this.setState({sent: true})
-    // this.sendFeedback(templateId, {message_html: info,to_name:'Tastyyy', from_name: name, reply_to: 'victorgordian103@gmail.com'})
+    if(this.state.formValid === true){
+      let name = this.state.fname + " " + this.state.lname
+      this.props.info(name, this.state.email, this.state.number, true)
+      let customer_templateId = 'template_bhxhQxe2'
+      let info = `Name: ${name} <br> Number: ${this.state.number}}`
+      this.setState({loader: true})
+      this.sendFeedback(customer_templateId, {info,to_name:this.capitlize(this.state.fname), email: this.state.email})
+    }else{
+      console.log(this.state.formValid)
+
+    }
+    
   }
 
 
@@ -74,11 +88,9 @@ class CheckOut extends React.Component {
     window.emailjs.send(
       'gmail', templateId,
       variables
-      ).then(res => {
-        console.log('Email successfully sent!')
-        this.setState({sent: false})
+      ).then(() => {
+        
       })
-      // Handle errors here however you like, or use a React error boundary
       .catch(err => console.error('Oh well, you failed. Here some thoughts on the error that occured:', err))
     }
   
@@ -92,8 +104,8 @@ class CheckOut extends React.Component {
             <FormErrors formErrors={this.state.formErrors} />
           </div>
           <div className='name'>
-          <Input primary placeholder='First Name' type='text' name='fname' required="required" onChange={this.addInfo} />
-          <Input primary placeholder='Last Name' type='text' name='lname' required="required"  onChange={this.addInfo} />
+          <Input primary placeholder='First Name' type='text' name='fname' required="required" onChange={this.handleUserInput} />
+          <Input primary placeholder='Last Name' type='text' name='lname' required="required"  onChange={this.handleUserInput} />
           </div>
           <div className='phone'>
             <div className='usphone'>
@@ -101,13 +113,13 @@ class CheckOut extends React.Component {
               <h1> +1</h1>  
             </div>
          
-          <Input  placeholder='Phone Number' type='text' required="required" name='number' maxLength='10' onChange={this.addInfo} />
+          <Input  placeholder='Phone Number' type='text' required="required" name='number' maxLength='10' onChange={this.handleUserInput} />
           </div>
-          <Input primary placeholder='Email' type='text' name='email' required="required" onChange={this.addInfo} />
+          <Input primary placeholder='Email' type='text' name='email' required="required" onChange={this.handleUserInput} />
           
-          {this.state.sent ? (
-                     <div class="loader"></div> 
-                ):<EnterButton type='submit' disable={!this.state.formValid} > Enter </EnterButton>}
+          {this.state.loader ? (
+                     <div className="loader"></div> 
+                ):<EnterButton type='submit' disable={!this.state.formValid}  onClick={this.sendInfo}> Enter </EnterButton>}
           
         </form>
       </div>
