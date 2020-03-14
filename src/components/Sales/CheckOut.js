@@ -12,6 +12,7 @@ const EnterButton = styled(Button)`
   font-size:1.5em;
   font-weight:bold;
   padding:.8em;
+  letter-spacing: .05em;
 
 `;
 

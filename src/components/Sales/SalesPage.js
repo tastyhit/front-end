@@ -30,21 +30,10 @@ class Sales extends Component {
         this.setState({piece: "Both"})
     }
 
-    generateOTP(){
-        let one = Math.floor((Math.random() * 9) + 1)
-        let two = Math.floor((Math.random() * 9) + 1)
-        let three = Math.floor((Math.random() * 9) + 1)
-        let four = Math.floor((Math.random() * 9) + 1)
-        let five = Math.floor((Math.random() * 9) + 1)
-        let six = Math.floor((Math.random() * 9) + 1)
-        let otp = `${one}${two}${three}${four}${five}${six}`
-        return otp
-        
-    }
 
     submittingState = (name, email, phone) => {
         this.setState({name: name, email: email, phone: phone})
-        const acc = {name, email, phone, zipcode:90280, alive: true, otp:this.generateOTP()}
+        const acc = {name, email, phone, zipcode:90280, alive: true}
         console.log(acc)
         axios
         .post(url, acc)

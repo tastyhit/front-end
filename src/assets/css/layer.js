@@ -14,7 +14,7 @@ export const Button = styled.button`
     font-size:1.6em;
     width:100%;
     text-transform: uppercase;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.1em;
     
     ${props =>
     props.primary &&
@@ -61,11 +61,12 @@ export const Input = styled.input`
   ${props =>
     props.primary &&
     css`
-    color:black
+    text-transform:uppercase;
+    color:black;
     margin:0 auto;
     margin-bottom:1em;
     ::placeholder{
-
+      text-transform:none;
     }
     `}
   ${props =>

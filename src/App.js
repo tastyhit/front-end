@@ -6,6 +6,7 @@ import Web from './components/Web/Web1'
 import SignUp from './components/Web/SignUp'
 import Sales from './components/Sales/SalesPage'
 import Category from './components/Category'
+import LoginIn from './components/Auth/Login'
 
 class App extends Component {
   render() {
@@ -14,7 +15,8 @@ class App extends Component {
         <Route exact path='/' component={Web} />
         <Route path='/sign-up' component={SignUp} />
         <Route path='/welcome' component={Sales} />
-        <Route path='/options' component={Category} /> 
+        <Route path='/options' component={Category} />
+        <Route exact path='/login' component={LoginIn} /> 
       </div>
     );
   }
