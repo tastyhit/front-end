@@ -89,7 +89,7 @@
 }
 
 .top-form{
-  margin-bottom: 2em;;
+  margin-bottom: 2em;
 }
 .top-form h1{
   font-size: 2em;
@@ -101,6 +101,18 @@
   font-size: 2em;
   font-family: 'Open Sans',Helvetica;
   margin-top:.5em;
+}
+
+.bottom-form{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width:40%;
+}
+
+.bottom-form button{
+  width:50%;
+  margin: 1em auto 0 auto;
 }
 
 @media only screen and (max-width: 600px){

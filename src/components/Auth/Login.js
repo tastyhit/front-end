@@ -52,8 +52,11 @@ class Login extends Component {
                       <div className='otp-form'>
                   
                         <h1>Please enter your One Time Password</h1>
+                     
                         <input type='text' name='otp' value={this.state.otp} onChange={this.inputHandler} maxLength='6' />
                         <button type='submit' onClick={this.authOtp}>Enter</button>
+                      
+                       
                     
                     </div>   
                   ):<div className='login-form'>
@@ -61,9 +64,11 @@ class Login extends Component {
                       <h1>Log In</h1>
                       <h2>Please Enter your Phone Number</h2>
                   </div>
-                      
+                      <div className='bottom-form'>
                       <input type='text' name='phone' placeholder='Phone Number' value={this.state.phone} onChange={this.inputHandler} maxLength='10'/>
                       <button type='submit' onClick={this.authUser}>Enter</button>
+                      </div>
+                      
                 </div>}
               
               </div>
