@@ -13,7 +13,7 @@ class Login extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            
+            nextStep: true,
         }
     }
     
@@ -64,7 +64,7 @@ class Login extends Component {
                 {this.state.nextStep ? (
                       <div className='otp-form'>
                   
-                        <h1>Please enter your One Time Password</h1>
+                        <p>Please enter your One Time Password</p>
                      
                         <input type='text' name='otp' value={this.state.otp} onChange={this.inputHandler} maxLength='6' />
                         <button type='submit' onClick={this.authOtp}>Enter</button>
