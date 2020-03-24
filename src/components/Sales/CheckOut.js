@@ -31,6 +31,18 @@ class CheckOut extends React.Component {
    };
   }
 
+  numUserInput = e =>{
+    const name = e.target.name;
+    const value = e.target.value;
+    const re = /^[0-9\b]+$/;
+    if(value === '' || re.test(value)){
+      if(name === 'number'){
+        this.setState({[name]: value},
+          () => { this.validateField(name, value) }); 
+      }
+    }
+  }
+
   handleUserInput = e => {
     
     const name = e.target.name;
@@ -108,13 +120,13 @@ class CheckOut extends React.Component {
           <Input primary placeholder='First Name' type='text' name='fname' required="required" onChange={this.handleUserInput} />
           <Input primary placeholder='Last Name' type='text' name='lname' required="required"  onChange={this.handleUserInput} />
           </div>
-          <div className='phone'>
+          <div className='phone nobk'>
             <div className='usphone'>
               <img src={USicon} alt='usicon' className='usicon'/>
               <h1> +1</h1>  
             </div>
          
-          <Input  placeholder='Phone Number' type='text' required="required" name='number' maxLength='10' onChange={this.handleUserInput} />
+          <Input  placeholder='Phone Number' type='text' required="required" value={this.state.number || ''} name='number' maxLength='10' onChange={this.numUserInput} />
           </div>
           <Input primary placeholder='Email' type='text' name='email' required="required" onChange={this.handleUserInput} />
           

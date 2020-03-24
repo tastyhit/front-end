@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+import { Input, Button } from '../../assets/css/layer'
 import logo from '../../assets/images/Finalicon.png';
 import '../../assets/css/checkout.css'
+import USicon from '../../assets/images/usa-icon.jpg'
 
 const url ='http://localhost:4000/api/users/login'
 const auth ='http://localhost:4000/api/users/auth'
@@ -11,13 +13,24 @@ class Login extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            nextStep: false
+            
         }
     }
     
     inputHandler = (e) =>{
-      this.setState({ [e.target.name]: e.target.value });
+      const re = /^[0-9\b]+$/;
+      if(e.target.value === '' || re.test(e.target.value)){
+        if(e.target.name === 'phone'){
+            this.setState({ [e.target.name]: e.target.value,  });
+        }
+        
+  
+      }
+      
+     
     }
+
+  
 
     authUser = (e) =>{
       e.preventDefault();
@@ -61,12 +74,21 @@ class Login extends Component {
                     </div>   
                   ):<div className='login-form'>
                   <div className='top-form'>
-                      <h1>Log In</h1>
+                      <h1>Sign In</h1>
                       <h2>Please Enter your Phone Number</h2>
                   </div>
                       <div className='bottom-form'>
-                      <input type='text' name='phone' placeholder='Phone Number' value={this.state.phone} onChange={this.inputHandler} maxLength='10'/>
-                      <button type='submit' onClick={this.authUser}>Enter</button>
+                        <div className='phone'>
+                          <div className='usphone'>
+                            <img src={USicon} alt='usicon' className='usicon'/>
+                            <h1> +1</h1>  
+                          </div>
+                      
+                          <Input type='text' name='phone' placeholder='Phone Number' value={this.state.phone || ''} onChange={this.inputHandler} maxLength='10'/>
+                        </div>
+                        <p>We'll send a text to verify your phone</p>
+                        <p>By clicking next you agree to TastyHit's Terms and Conditions and Privacy Policy</p>
+                        <Button primary type='submit' onClick={this.authUser}>Next</Button>
                       </div>
                       
                 </div>}
