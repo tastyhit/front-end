@@ -13,21 +13,18 @@ class Login extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            nextStep: true,
+            nextStep: false,
         }
     }
     
     inputHandler = (e) =>{
       const re = /^[0-9\b]+$/;
       if(e.target.value === '' || re.test(e.target.value)){
-        if(e.target.name === 'phone'){
+        if(e.target.name === 'phone' || 'otp'){
             this.setState({ [e.target.name]: e.target.value,  });
         }
         
-  
       }
-      
-     
     }
 
   
@@ -46,6 +43,7 @@ class Login extends Component {
     authOtp = (e) =>{
       e.preventDefault();
       const acc = {phone: this.state.phone, otp: this.state.otp}
+      console.log(acc)
       axios
       .post(auth, acc)
       .then(() =>{
@@ -64,10 +62,12 @@ class Login extends Component {
                 {this.state.nextStep ? (
                       <div className='otp-form'>
                   
-                        <p>Please enter your One Time Password</p>
-                     
-                        <input type='text' name='otp' value={this.state.otp} onChange={this.inputHandler} maxLength='6' />
-                        <button type='submit' onClick={this.authOtp}>Enter</button>
+                        <p>Please enter your One Time Password(OTP)</p>
+                        <div className='otp-input'>
+                          <Input type='text' name='otp' value={this.state.otp || ''} onChange={this.inputHandler} maxLength='6' />
+                        </div>
+                       
+                        <Button primary type='submit' onClick={this.authOtp}>Enter</Button>
                       
                        
                     
