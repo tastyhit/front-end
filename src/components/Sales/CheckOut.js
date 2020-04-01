@@ -19,94 +19,94 @@ const EnterButton = styled(Button)`
 class CheckOut extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { 
+    this.state = {
       value: '',
       sentEmail: false,
-      formErrors: { number:'', email:'' },
+      formErrors: { number: '', email: '' },
       emailValid: false,
       numberValid: false,
       formValid: false,
       loader: false
 
-   };
+    };
   }
 
-  numUserInput = e =>{
+  numUserInput = e => {
     const name = e.target.name;
     const value = e.target.value;
     const re = /^[0-9\b]+$/;
-    if(value === '' || re.test(value)){
-      if(name === 'number'){
-        this.setState({[name]: value},
-          () => { this.validateField(name, value) }); 
+    if (value === '' || re.test(value)) {
+      if (name === 'number') {
+        this.setState({ [name]: value },
+          () => { this.validateField(name, value) });
       }
     }
   }
 
   handleUserInput = e => {
-    
+
     const name = e.target.name;
     const value = e.target.value;
-    this.setState({[name]: value},
-      () => { this.validateField(name, value) }); 
+    this.setState({ [name]: value },
+      () => { this.validateField(name, value) });
   }
 
-  validateField(fieldName, value){
-    let fieldValidationErrors  = this.state.formErrors;
+  validateField(fieldName, value) {
+    let fieldValidationErrors = this.state.formErrors;
     let emailValid = this.state.emailValid;
     let numberValid = this.state.numberValid;
-    
-    switch(fieldName){
+
+    switch (fieldName) {
       case 'email':
         emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
         fieldValidationErrors.email = emailValid ? '' : ' is invalid';
         break;
       case 'number':
         numberValid = value.length > 9;
-        fieldValidationErrors.number = numberValid ? '': ' is to short';
+        fieldValidationErrors.number = numberValid ? '' : ' is to short';
         break;
       default:
-        break;  
+        break;
 
     }
-    this.setState({formErrors: fieldValidationErrors, emailValid: emailValid, numberValid:numberValid}, this.validateForm)
+    this.setState({ formErrors: fieldValidationErrors, emailValid: emailValid, numberValid: numberValid }, this.validateForm)
   }
 
-  validateForm(){
-    this.setState({formValid: this.state.emailValid && this.state.numberValid});
+  validateForm() {
+    this.setState({ formValid: this.state.emailValid && this.state.numberValid });
   }
 
-  capitlize(str){
+  capitlize(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
 
   sendInfo = (e) => {
     e.preventDefault();
-    if(this.state.formValid === true){
+    if (this.state.formValid === true) {
       let name = this.state.fname + " " + this.state.lname
       this.props.info(name, this.state.email, this.state.number, true)
       let customer_templateId = 'template_bhxhQxe2'
       let info = `Name: ${name} <br> Number: ${this.state.number}}`
-      this.setState({loader: true})
-      this.sendFeedback(customer_templateId, {info,to_name:this.capitlize(this.state.fname), email: this.state.email})
-    }else{
+      this.setState({ loader: true })
+      this.sendFeedback(customer_templateId, { info, to_name: this.capitlize(this.state.fname), email: this.state.email })
+    } else {
       console.log(this.state.formValid)
 
     }
-    
+
   }
 
 
-  sendFeedback (templateId, variables) {
+  sendFeedback(templateId, variables) {
     window.emailjs.send(
       'gmail', templateId,
       variables
-      ).then(() => {
-        
-      })
+    ).then(() => {
+
+    })
       .catch(err => console.error('Oh well, you failed. Here some thoughts on the error that occured:', err))
-    }
-  
+  }
+
 
 
   render() {
@@ -117,23 +117,23 @@ class CheckOut extends React.Component {
             <FormErrors formErrors={this.state.formErrors} />
           </div>
           <div className='name'>
-          <Input primary placeholder='First Name' type='text' name='fname' required="required" onChange={this.handleUserInput} />
-          <Input primary placeholder='Last Name' type='text' name='lname' required="required"  onChange={this.handleUserInput} />
+            <Input primary placeholder='First Name' type='text' name='fname' required="required" onChange={this.handleUserInput} />
+            <Input primary placeholder='Last Name' type='text' name='lname' required="required" onChange={this.handleUserInput} />
           </div>
           <div className='phone nobk'>
             <div className='usphone'>
-              <img src={USicon} alt='usicon' className='usicon'/>
-              <h1> +1</h1>  
+              <img src={USicon} alt='usicon' className='usicon' />
+              <h1> +1</h1>
             </div>
-         
-          <Input  placeholder='Phone Number' type='text' required="required" value={this.state.number || ''} name='number' maxLength='10' onChange={this.numUserInput} />
+
+            <Input placeholder='Phone Number' type='text' required="required" value={this.state.number || ''} name='number' maxLength='10' onChange={this.numUserInput} />
           </div>
           <Input primary placeholder='Email' type='text' name='email' required="required" onChange={this.handleUserInput} />
-          
+
           {this.state.loader ? (
-                     <div className="loader"></div> 
-                ):<EnterButton type='submit' disable={!this.state.formValid}  onClick={this.sendInfo}> Enter </EnterButton>}
-          
+            <div className="loader"></div>
+          ) : <EnterButton type='submit' disable={!this.state.formValid} onClick={this.sendInfo}> Enter </EnterButton>}
+
         </form>
       </div>
     )
@@ -141,14 +141,14 @@ class CheckOut extends React.Component {
 
 }
 
-const FormErrors = ({formErrors}) =>
+const FormErrors = ({ formErrors }) =>
   <div>
-    {Object.keys(formErrors).map((fieldName, i) =>{
-      if(formErrors[fieldName].length > 0){
-        return(
-        <p key={i}>{fieldName}{formErrors[fieldName]}</p>
+    {Object.keys(formErrors).map((fieldName, i) => {
+      if (formErrors[fieldName].length > 0) {
+        return (
+          <p key={i}>{fieldName}{formErrors[fieldName]}</p>
         )
-      }else {
+      } else {
         return '';
       }
     })}

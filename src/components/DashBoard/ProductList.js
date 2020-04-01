@@ -2,26 +2,38 @@ import React, { Component } from 'react';
 
 import '../../assets/css/sales.css'
 
-
+import Product from './Product'
 
 class ProductList extends Component {
     constructor() {
         super();
         this.state = {
-            name: "",
-            piece: "",
-            email: "",
-            phone: "",
-            id: ""
+            products: []
         }
     }
 
 
-   
+
     render() {
         return (
-            <div className='form-wrapper'>
-                <div>Hi!</div>
+            <div className='prodDisplay-wrapper'>
+                <div className='yellow-bg'>
+
+                    <div className='prodDisplayBG'>
+                        <Product />
+                        <Product />
+                        <Product />
+                        <Product />
+                        <Product />
+                        <Product />
+                        <Product />
+                        <Product />
+                        <Product />
+                        <Product />
+                        <Product />
+                        <Product />
+                    </div>
+                </div>
 
             </div>
         )
