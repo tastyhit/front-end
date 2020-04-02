@@ -28,7 +28,7 @@ class Landing extends Component {
                     <h1> Tasty Hits</h1>
                 </div>
                 <Zipcode />
-                <ProductList />
+
                 {this.state.agecheck ? (
                     null
                 ) : <AgeCheck age={this.ageAlert} />}
