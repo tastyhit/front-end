@@ -1,19 +1,19 @@
 .prodDisplay-wrapper{
   max-width: 1200px;
   width:100%;
- 
+ margin:0 auto;
 }
 
 .yellow-bg{
-  background-color: #ffc300;
-  width:800px;
+ 
   margin:0 auto;
 }
 
 .prodDisplayBG{
   max-width: 800px;
   width:80%;
-  margin: 20px auto 0 auto;
+  margin: 0 auto;
+  padding-top: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -23,9 +23,7 @@
 .prod-wrapper{
   background-color: whitesmoke;
   width:26%;
-  margin:.3px;
-  height:200px;
- 
+  border: .1em solid #00AAE7;
  
 }
 

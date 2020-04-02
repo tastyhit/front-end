@@ -5,7 +5,7 @@ import axios from 'axios';
 
 import '../../assets/css/sales.css'
 
-const url ='http://localhost:4000/api/users'
+const url = 'http://localhost:4000/api/users'
 
 class Sales extends Component {
     constructor() {
@@ -26,21 +26,21 @@ class Sales extends Component {
         this.setState({ piece: "Pipe", })
     }
 
-    clickedBoth = (e) =>{
-        this.setState({piece: "Both"})
+    clickedBoth = (e) => {
+        this.setState({ piece: "Both" })
     }
 
 
     submittingState = (name, email, phone) => {
-        this.setState({name: name, email: email, phone: phone})
-        const acc = {name, email, phone, zipcode:90280, alive: true}
+        this.setState({ name: name, email: email, phone: phone })
+        const acc = { name, email, phone, zipcode: 90280, alive: true }
         console.log(acc)
         axios
-        .post(url, acc)
-        .then(()=>{
-            this.props.history.push('/login')
-        })
-        .catch(err =>{console.log(err)})
+            .post(url, acc)
+            .then(() => {
+                this.props.history.push('/login')
+            })
+            .catch(err => { console.log(err) })
     }
 
 
@@ -57,14 +57,17 @@ class Sales extends Component {
         }
     }
 
-   
+
     render() {
         return (
-            <div className='form-wrapper'>
-                <InfoContainer a={this.clickedA} b={this.clickedB} c={this.clickedBoth} glass={this.state.piece}  />
-                {this.secondQuestion()}
+            <div className='webpage'>
+                <div className='form-wrapper '>
+                    <InfoContainer a={this.clickedA} b={this.clickedB} c={this.clickedBoth} glass={this.state.piece} />
+                    {this.secondQuestion()}
 
+                </div>
             </div>
+
         )
     }
 }

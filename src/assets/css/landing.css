@@ -3,7 +3,7 @@
 .webpage{
   display: flex;
   flex-direction: column;
-  max-width: 1200px;
+
   width:100%;
   background:linear-gradient(to bottom, rgba(7, 7, 7, 0.7), rgba(7, 7, 7, 0.7)), url(../images/background.jpg) repeat;
 }
@@ -24,6 +24,7 @@
   max-width: 1200px;
   width: 100%;
   height: 100px;
+  margin:0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
