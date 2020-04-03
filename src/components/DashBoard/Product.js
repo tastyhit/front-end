@@ -17,8 +17,9 @@ const Product = () => {
       </div>
 
       <img src={require('../../assets/images/beaker-bong-png-5-original.png')} alt='something' />
-      <h1>Tasty Hit Shop</h1>
       <p>$60</p>
+      <h1>Tasty Hit Shop</h1>
+
     </div>
   )
 }

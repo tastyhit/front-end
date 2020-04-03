@@ -13,7 +13,8 @@
   max-width: 800px;
   width:90%;
   margin: 0 auto;
-  padding-top: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -58,4 +59,26 @@
   position: absolute;
   right:0px;
   top:0px;
+}
+
+.prodDisplay-wrapper h1{
+  font-size: 1.4em;
+  font-weight: bold;
+  line-height: 1em;
+  font-family: "Proxima", "Open Sans", "Helvetica";
+  margin-bottom: 12px;
+}
+
+.prodDisplay-wrapper p{
+  font-size: 1.4em;
+  font-weight: bold;
+  line-height: 1em;
+  font-family: "Proxima", "Open Sans", "Helvetica";
+}
+
+
+@media only screen and (max-width: 600px){
+  .prod-wrapper{
+    width:40%;
+  }
 }
