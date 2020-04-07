@@ -137,6 +137,7 @@
 .zipinput-wrapper input{
   border: none;
   margin-bottom: 0px;
+  width:80%
 
 }
 
@@ -198,6 +199,10 @@
   background-color: rgba(0,0,0,0.4);
   width:100%;
   height:100vh;
+}
+
+.agecheck-wrapper a {
+  width:100%;
 }
 
 .agecheck-wrapper p {
