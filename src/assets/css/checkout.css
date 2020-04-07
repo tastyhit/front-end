@@ -91,15 +91,14 @@
 }
 
 .top-bar2{
-  border-bottom: 1px #E5E6E7 solid;
-  padding-top:15px;
+
   background-color: #ffc300;
 
 }
 
 .top-bar2 .yellow{
-  width:31px;
-  height:65px;
+  width:30px;
+  height:auto;
   margin-left:0px;
 }
 
@@ -225,7 +224,15 @@
     margin-right: auto;
   }
 
-  
+  .top-bar2{
+
+    padding-top:10px;
+  }
+
+  .top-bar2 .yellow{
+    width:20px;
+    height: auto;
+  }
 
 }
 
