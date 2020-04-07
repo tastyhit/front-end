@@ -136,7 +136,8 @@
 
 .zipinput-wrapper input{
   border: none;
-  margin-bottom: 0px;
+  margin:0px;
+  padding-left:5px;
   width:80%
 
 }
@@ -159,7 +160,7 @@
 .address-icon{
   width:20px;
   height:20px;
-  margin-left:10px;
+  
 }
 
 .headsub-wrapper {
@@ -271,7 +272,7 @@
 @media only screen and (max-width: 800px){
 
   .top-bar{
-    height:80px;
+    height:50px;
   }
   .topBar-left{
     width:60%;
@@ -298,8 +299,8 @@
   }
 
   .yellow{
-    width:30px;
-    height:60px;
+    width:20px;
+    height:auto;
     margin-left:0px;
     margin-right:35px;
   }
