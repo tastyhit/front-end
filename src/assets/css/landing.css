@@ -22,7 +22,7 @@
 .top-bar{
   max-width: 1200px;
   width: 100%;
-  height: 100px;
+  height: 80px;
   margin:0 auto;
   display: flex;
   justify-content: space-between;
@@ -49,8 +49,8 @@
 
 
 .yellow{
-  width:45px;
-  height:90px;
+  width:30px;
+  height:auto;
   margin-left:20px;
 }
 
@@ -272,7 +272,9 @@
 @media only screen and (max-width: 800px){
 
   .top-bar{
-    height:50px;
+    padding-top: 10px;
+    padding-bottom:5px;
+    height:auto;
   }
   .topBar-left{
     width:60%;
@@ -302,6 +304,6 @@
     width:20px;
     height:auto;
     margin-left:0px;
-    margin-right:35px;
+    margin-right:62px;
   }
 }
