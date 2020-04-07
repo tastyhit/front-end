@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 import { Card, Title, Button } from '../../assets/css/layer';
 import styled, { css } from 'styled-components';
 
@@ -40,7 +41,7 @@ const AgeCheck = ({ age, google }) => (
         <p>You must be atleast 21 years of age to view this site.</p>
       </div>
       <WButton onClick={age}>I'M AT LEAST 21 YEARS OLD</WButton>
-      <WButton secondary >I'M NOT 21 YET</WButton>
+      <a href='https://www.google.com/'><WButton secondary >I'M NOT 21 YET</WButton></a>
     </AgeCard>
   </div>
 
