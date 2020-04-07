@@ -49,11 +49,7 @@ class ZipCode extends Component {
         }
     }
 
-    //Checking if its qualify  and showing zipcode to user
 
-    checkAge = (e) => {
-
-    }
 
     inputHandler = (e) => {
         e.preventDefault();

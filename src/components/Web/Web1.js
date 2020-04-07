@@ -6,21 +6,22 @@ import '../../assets/css/landing.css'
 import ZipCode from '../Landing/Zipcode';
 import AgeCheck from '../Landing/AgeCheck'
 import { Link } from 'react-router-dom';
+import ProductList from '../DashBoard/ProductList';
 
-class WebSite extends Component  {
-    constructor(){
+class WebSite extends Component {
+    constructor() {
         super();
-        this.state ={
+        this.state = {
             over21: false,
-            
+
         }
 
     }
 
-    pathClick = (e) =>{
-        if(e.target.attributes.name.value === 'something'){
+    pathClick = (e) => {
+        if (e.target.attributes.name.value === 'something') {
             console.log('something')
-        } else if (e.target.attributes.name.value ==='something1'){
+        } else if (e.target.attributes.name.value === 'something1') {
             console.log('ok')
         } else {
             return null
@@ -29,15 +30,15 @@ class WebSite extends Component  {
         this.setState({})
     }
 
-    ageAlert = (e) =>{
-        this.setState({agecheck: true})
+    ageAlert = (e) => {
+        this.setState({ agecheck: true })
         localStorage.setItem('age', true)
     }
 
-    
 
 
-    render(){
+
+    render() {
         let width = window.innerWidth;
         return (
             <div className='webpage wb1'>
@@ -45,24 +46,25 @@ class WebSite extends Component  {
                     <div className='topBar-left'>
                         <img src={logo} alt='Logo' className='yellow' />
                     </div>
-                    {width > 800 ? <NavBar /> : <div className='mobile-menu'> <img src={menu} alt='menu' /></div>}    
+                    {width > 800 ? <NavBar /> : <div className='mobile-menu'> <img src={menu} alt='menu' /></div>}
                 </div>
                 <div className='title'>
-                <h1>Tasty Hits</h1>
+                    <h1>Tasty Hits</h1>
                 </div>
-                
+
                 <div className='zipcode-section' >
-                <ZipCode />
+                    <ZipCode />
                 </div>
                 {width > 800 ? null : <div className='login-mobile'><h1>Already have an account? </h1><Link> Log In</Link></div>}
+                <ProductList />
                 {this.state.agecheck ? (
                     null
-                ):<AgeCheck age={this.ageAlert}/>}
-            </div> 
-            
+                ) : <AgeCheck age={this.ageAlert} />}
+            </div>
+
         )
     }
-    
+
 }
 
 

@@ -16,6 +16,7 @@ const WButton = styled(Button)`
   border:none;
   font-size:.8em;
   color:white;
+  letter-spacing:.05em;
   ${props =>
     props.secondary &&
     css`
