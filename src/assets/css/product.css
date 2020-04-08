@@ -22,10 +22,9 @@
 
 .prod-wrapper{
   background-color: whitesmoke;
-  width:30%;
+  width:100%;
   border: .1em solid #00AAE7;
   position: relative;
-  margin:2px;
   border-radius: 5px;
  
 }
@@ -87,9 +86,15 @@
   font-family: "Proxima", "Open Sans", "Helvetica";
 }
 
+.link-prod{
+  width:30%;
+  margin:2px;
+  text-decoration: none;
+  color:black;
+}
 
 @media only screen and (max-width: 600px){
-  .prod-wrapper{
+  .link-prod{
     width:48%;
   }
 }
