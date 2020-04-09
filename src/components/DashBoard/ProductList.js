@@ -21,7 +21,7 @@ class ProductList extends Component {
                 <div className='yellow-bg'>
 
                     <div className='prodDisplayBG'>
-                        <Link className='link-prod' to='/product'> <Product /></Link>
+                        <Link className='link-prod' to='/view'> <Product /></Link>
                         <Link className='link-prod'> <Product /></Link>
                         <Link className='link-prod'> <Product /></Link>
                         <Link className='link-prod'> <Product /></Link>

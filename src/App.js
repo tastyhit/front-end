@@ -20,7 +20,7 @@ class App extends Component {
         <Route path='/options' component={Category} />
         <Route path='/dashboard' component={ProductList} />
         <Route exact path='/login' component={LoginIn} />
-        <Route path='/view/:brand/:id' component={ViewItem} />
+        <Route path='/view' component={ViewItem} />
       </div>
     );
   }
