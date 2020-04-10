@@ -15,16 +15,8 @@ class ViewItem extends Component {
 
   render() {
     return (
-      <div className='prodDisplay-wrapper'>
-        <div className='yellow-bg'>
-
-          <div className='prodDisplayBG'>
-            <h1>HI</h1>
-
-
-          </div>
-        </div>
-
+      <div className='view-item'>
+        <h1>Hey</h1>
       </div>
     )
   }
