@@ -60,7 +60,7 @@ class Sales extends Component {
 
     render() {
         return (
-            <div className='webpage'>
+            <div className='webpage wbpg2'>
                 <div className='form-wrapper '>
                     <InfoContainer a={this.clickedA} b={this.clickedB} c={this.clickedBoth} glass={this.state.piece} />
                     {this.secondQuestion()}
