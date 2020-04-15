@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 
+import logo from '../../assets/images/Finalicon.png';
 import '../../assets/css/sales.css'
+import '../../assets/css/checkout.css'
 
+import { Button } from '../../assets/css/layer'
 
 class ViewItem extends Component {
   constructor() {
@@ -16,10 +19,19 @@ class ViewItem extends Component {
   render() {
     return (
       <div className='view-item'>
-        <div className='img-item'>
-          <img src={require('../../assets/images/beaker-bong-png-5-original.png')} alt='something' />
+        <div className='top-bar2'>
+          <img src={logo} alt='Logo' className='yellow' />
         </div>
-        <div>
+        <div className='img-item'>
+          <div className='item-img'><img src={require('../../assets/images/beaker-bong-png-5-original.png')} alt='something' /></div>
+          <div className='item-img'><img src={require('../../assets/images/beaker-bong-png-5-original.png')} alt='something' /></div>
+          <div className='item-img'><img src={require('../../assets/images/beaker-bong-png-5-original.png')} alt='something' /></div>
+          <div className='item-img'><img src={require('../../assets/images/beaker-bong-png-5-original.png')} alt='something' /></div>
+          <div className='item-img'><img src={require('../../assets/images/beaker-bong-png-5-original.png')} alt='something' /></div>
+          <div className='item-img'><img src={require('../../assets/images/beaker-bong-png-5-original.png')} alt='something' /></div>
+          <div className='item-img'><img src={require('../../assets/images/beaker-bong-png-5-original.png')} alt='something' /></div>
+        </div>
+        <div className='item-description'>
           <h1>Brand Name</h1>
           <h1>Beaker</h1>
           <h1>Price</h1>
