@@ -130,6 +130,72 @@
   width:100%;
 }
 
+.detail-wrapper{
+  display:flex;
+  flex-direction: row;
+  max-width: 1080px;
+  width:100%;
+  margin:0 auto;
+}
+
+.item-description{
+  margin-top:2em;
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  width:80%;
+  padding-left:48px
+}
+.price-name{
+  padding-top:1em;
+  padding-bottom: 1em;
+  display: flex;
+  flex-direction: row;
+  
+  width:70%;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.price-name h1{
+  font-size: 1.8em;
+  font-weight: 800;
+  background-color:#ffc300 ;
+  padding:1em;
+  
+}
+
+.price-name h2{
+  color:#00AAE7;
+  font-weight: 700;
+  font-size: 2.5em;
+}
+
+.location h2{
+  color:#00AAE7;
+  font-size: 1.8em;
+  margin-top:.5em;
+}
+
+.location{
+  border-bottom:1px solid lightgrey;
+  padding-bottom: 1.5em;
+}
+
+.summary{
+  margin-top:4em;
+  font-size: 1.8em;
+  line-height: 1.4em;
+}
+
+.details{
+  font-size:1.8em;
+  margin-top: 1em;
+  margin-bottom:1.5em;
+  line-height: 1.7em;
+}
+
 
 @media only screen and (max-width: 600px){
   .link-prod{
