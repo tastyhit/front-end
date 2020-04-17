@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import logo from '../../assets/images/Finalicon.png';
-import '../../assets/css/sales.css'
-import '../../assets/css/checkout.css'
+import '../../assets/css/sales.css';
+import '../../assets/css/checkout.css';
 
-import { Button } from '../../assets/css/layer'
+import { Button } from '../../assets/css/layer';
+
 
 class ViewItem extends Component {
   constructor() {
@@ -26,11 +28,6 @@ class ViewItem extends Component {
         <div className='imgItem-wrapper'>
 
           <div className='img-item'>
-            <div className='item-img'><img src={require('../../assets/images/beaker-bong-png-5-original.png')} alt='something' /></div>
-            <div className='item-img'><img src={require('../../assets/images/beaker-bong-png-5-original.png')} alt='something' /></div>
-            <div className='item-img'><img src={require('../../assets/images/beaker-bong-png-5-original.png')} alt='something' /></div>
-            <div className='item-img'><img src={require('../../assets/images/beaker-bong-png-5-original.png')} alt='something' /></div>
-            <div className='item-img'><img src={require('../../assets/images/beaker-bong-png-5-original.png')} alt='something' /></div>
             <div className='item-img'><img src={require('../../assets/images/beaker-bong-png-5-original.png')} alt='something' /></div>
             <div className='item-img'><img src={require('../../assets/images/beaker-bong-png-5-original.png')} alt='something' /></div>
             <div className='item-img'><img src={require('../../assets/images/beaker-bong-png-5-original.png')} alt='something' /></div>
@@ -65,9 +62,15 @@ class ViewItem extends Component {
             </div>
           </div>
           <div className='right-wrapper'>
-            <h1>Tasty Hits Shop</h1>
-            <button>Login in</button>
-            <button>Sign up</button>
+            <div className='login'>
+              <div className='pic-name'>
+                <div className='pro-pic' />
+                <h1>Tasty Hits Shop</h1>
+              </div>
+
+              <Link to='/Login' className='box link'><Button primary>Log in</Button></Link>
+              <button>Sign up</button>
+            </div>
           </div>
         </div>
 
