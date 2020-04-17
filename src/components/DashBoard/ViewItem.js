@@ -6,19 +6,26 @@ import '../../assets/css/sales.css';
 import '../../assets/css/checkout.css';
 
 import { Button } from '../../assets/css/layer';
+import ZipCode from '../Landing/Zipcode';
 
 
 class ViewItem extends Component {
   constructor() {
     super();
     this.state = {
-      products: []
+      products: [],
     }
   }
 
-
+  zipcode = e => {
+    this.setState({ signUp: true })
+  }
 
   render() {
+    if (this.state.signUp) {
+      return <div className='item-signup'><div className='zip-wrapper'><ZipCode /></div></div>
+    }
+
     return (
       <div className='view-item'>
         <div className='top-bar2'>
@@ -69,7 +76,7 @@ class ViewItem extends Component {
               </div>
 
               <Link to='/Login' className='box link'><Button primary>Log in</Button></Link>
-              <button>Sign up</button>
+              <Button onClick={this.zipcode} className='sign-up'> Sign Up</Button>
             </div>
           </div>
         </div>
