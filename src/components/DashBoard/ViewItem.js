@@ -87,7 +87,7 @@ class ViewItem extends Component {
             </div>
           </div>
         </div>
-        <MapView />
+
       </div>
     )
   }
