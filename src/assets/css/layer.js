@@ -15,6 +15,8 @@ export const Button = styled.button`
     width:100%;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    outline:none;
+     
     
     ${props =>
     props.primary &&
@@ -22,6 +24,7 @@ export const Button = styled.button`
         color:whitesmoke;
         background: #00AAE7;
       `}
+        
     
 `;
 

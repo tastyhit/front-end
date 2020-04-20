@@ -63,3 +63,20 @@ body {
 *{
   box-sizing: border-box;
 }
+
+
+button:focus,
+button:active {
+    -moz-outline: 0;
+    -ms-outline:0;
+    -o-outline: 0;
+		-webkit-outline: 0;
+		outline:0;
+} 
+
+
+
+button::-moz-focus-inner {
+  border: 0;
+}
+

@@ -22,10 +22,9 @@
 
 .prod-wrapper{
   background-color: whitesmoke;
-  width:30%;
+  width:100%;
   border: .1em solid #00AAE7;
   position: relative;
-  margin:2px;
   border-radius: 5px;
  
 }
@@ -87,9 +86,205 @@
   font-family: "Proxima", "Open Sans", "Helvetica";
 }
 
+.link-prod{
+  width:30%;
+  margin:2px;
+  text-decoration: none;
+  color:black;
+}
 
+.view-item{
+  display:flex;
+  flex-direction: column;
+  max-width: 2400px;
+  width:100%;
+}
+
+.imgItem-wrapper{
+  background:linear-gradient(to bottom, rgba(7, 7, 7, 0.2), rgba(7, 7, 7, 0.2)), url(../images/background.jpg) repeat;
+  width:100%;
+  margin-top:20px;
+  height: 350px;
+  display: flex;
+
+  box-sizing: border-box;
+
+  
+}
+.img-item{
+
+  display:flex;
+  margin:0 auto;
+
+}
+
+.item-img{
+
+  width:350px;
+  margin-right: 4px;
+  background-color: whitesmoke;
+}
+
+.item-img img{
+  max-width: 350px;
+  width:100%;
+}
+
+.detail-wrapper{
+  display:flex;
+  flex-direction: row;
+  max-width: 1080px;
+  width:100%;
+  margin:0 auto;
+  position: relative;
+}
+
+.item-description{
+  margin-top:2em;
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  width:70%;
+  padding-left:48px
+}
+.price-name{
+  padding-top:1em;
+  padding-bottom: 1em;
+  display: flex;
+  flex-direction: row;
+  
+  width:70%;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.price-name h1{
+  font-size: 1.8em;
+  font-weight: 800;
+  background-color:#ffc300 ;
+  padding:1em;
+  
+}
+
+.price-name h2{
+  color:#00AAE7;
+  font-weight: 700;
+  font-size: 2.5em;
+}
+
+.location h2{
+  color:#00AAE7;
+  font-size: 1.8em;
+  margin-top:.5em;
+}
+
+.location{
+  border-bottom:1px solid lightgrey;
+  padding-bottom: 1.5em;
+}
+
+.summary{
+  margin-top:4em;
+  font-size: 1.8em;
+  line-height: 1.4em;
+}
+
+.details{
+  font-size:1.8em;
+  margin-top: 1em;
+  margin-bottom:1.5em;
+  line-height: 1.7em;
+}
+
+.right-wrapper{
+  border:1px solid lightgrey;
+  width:20%;
+  position: absolute;
+  right:20px;
+  width:300px;
+  top:-68px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.pic-name{
+  display: flex;
+  flex-direction: row;
+  width:100%;
+  align-items: center;
+}
+
+.login{
+  display: flex;
+  flex-direction: column;
+  padding:15px;
+}
+
+.pro-pic{
+  width:65px;
+  height:65px;
+  border-radius: 50%;
+  background-size: cover;
+  background-image:url(../images/flower2.png);
+  background-position: 50% 50% !important;
+  background-repeat: no-repeat;
+  margin-right:15px;
+}
+
+.pic-name h1{
+  font-size:1.8em;
+}
+
+.login button{
+  height: 44px;
+  padding:0px;
+  margin-top: 10px;
+}
+
+.sign-up{
+  border:1px solid #00AAE7;
+  color: #00AAE7;
+}
+
+.sign-up:hover{
+  background-color: rgba(0, 170, 231, .1);
+}
+
+.item-signup{
+  width:100%;
+  background:linear-gradient(to bottom, rgba(7, 7, 7, 0.7), rgba(7, 7, 7, 0.7)), url(../images/background.jpg) repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+
+}
+
+.zip-wrapper{
+  max-width: 800px;
+  width:100%;
+  height:500px;
+  border:1px solid rgb(255,195,0);
+  background-color: rgb(255,195,0, .1);
+  position: relative;
+  display: flex;
+  align-items: center;
+ margin-top: 80px;
+}
+
+.zip-wrapper .zipCode{
+  position: absolute;
+  z-index: 1;
+  width:100%;
+}
 @media only screen and (max-width: 600px){
-  .prod-wrapper{
+  .link-prod{
     width:48%;
+  }
+}
+
+@media only screen and (max-width:800px){
+  .item-description{
+    padding-left:28px;
   }
 }
