@@ -282,3 +282,9 @@
     width:48%;
   }
 }
+
+@media only screen and (max-width:800px){
+  .item-description{
+    padding-left:28px;
+  }
+}

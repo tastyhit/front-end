@@ -7,6 +7,7 @@ import '../../assets/css/checkout.css';
 
 import { Button } from '../../assets/css/layer';
 import ZipCode from '../Landing/Zipcode';
+import MapView from './MapView';
 
 
 class ViewItem extends Component {
@@ -35,6 +36,12 @@ class ViewItem extends Component {
         <div className='imgItem-wrapper'>
 
           <div className='img-item'>
+            <div className='item-img'><img src={require('../../assets/images/beaker-bong-png-5-original.png')} alt='something' /></div>
+            <div className='item-img'><img src={require('../../assets/images/beaker-bong-png-5-original.png')} alt='something' /></div>
+            <div className='item-img'><img src={require('../../assets/images/beaker-bong-png-5-original.png')} alt='something' /></div>
+            <div className='item-img'><img src={require('../../assets/images/beaker-bong-png-5-original.png')} alt='something' /></div>
+            <div className='item-img'><img src={require('../../assets/images/beaker-bong-png-5-original.png')} alt='something' /></div>
+            <div className='item-img'><img src={require('../../assets/images/beaker-bong-png-5-original.png')} alt='something' /></div>
             <div className='item-img'><img src={require('../../assets/images/beaker-bong-png-5-original.png')} alt='something' /></div>
             <div className='item-img'><img src={require('../../assets/images/beaker-bong-png-5-original.png')} alt='something' /></div>
             <div className='item-img'><img src={require('../../assets/images/beaker-bong-png-5-original.png')} alt='something' /></div>
@@ -80,7 +87,7 @@ class ViewItem extends Component {
             </div>
           </div>
         </div>
-
+        <MapView />
       </div>
     )
   }
