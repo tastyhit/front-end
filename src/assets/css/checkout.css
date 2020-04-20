@@ -2,37 +2,240 @@
   display:flex;
   flex-direction: column;
   margin:0 auto;
-  width:70%;
- 
+  width:82%;
+  background-color: #00AAE7;
 }
+
+
 
 .contactForm {
   margin:0 auto;
   width:100%;
-  margin-bottom:5em;
+  margin:5em 0;
 }
 
-.contactForm input{
-  width:50%;
-  
-}
+
 
 .contactForm button{
   margin-top: 2em;
   width:50%;
 }
 
+.name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width:100%;
+  margin: 0 auto;
+}
+
+.phone {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  margin-bottom: 1.5em ;
+  background-color: whitesmoke;
+  padding: 1em 0;
+  border-radius: .4em;
+}
+
+.phone h1 {
+  padding-left:5px;
+  font-size:2em;
+  color:black;
+}
+
+.phone img {
+  width: 30px;
+  height: 20px;
+}
+
+.nobk{
+  background-color: transparent;
+
+}
+
+
+.usphone{
+  display: flex;
+  flex-direction: row;
+
+  
+}
+
+.nobk input{
+  margin-right: 3em;
+  background-color: transparent;
+
+}
+
+
+.bottom-form .phone input:focus{
+  border:none;
+}
+
+
+
+.login-wrapperbg{
+  width:100%;
+}
+
+.login-wrapper{
+  max-width:800px;
+  width: 90%;
+  margin: 4em auto 0 auto;
+  background-color: #ffc300;
+  border-radius: 1em;
+}
+
+.top-bar2{
+
+  background-color: #ffc300;
+
+}
+
+.top-bar2 .yellow{
+  width:30px;
+  height:auto;
+  margin-left:0px;
+}
+
+.login-form{
+  padding:10em 0;
+  
+}
+
+.top-form{
+  margin-bottom: 3em;
+}
+.top-form h1{
+  font-size: 2em;
+  font-weight: 800;
+  font-family: 'Open Sans',Helvetica;
+}
+
+.top-form h2 {
+  font-size: 2em;
+  font-family: 'Open Sans',Helvetica;
+  margin-top:.5em;
+}
+
+.bottom-form{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width:50%;
+}
+
+.bottom-form button{
+
+  margin: 1em auto 0 auto;
+}
+
+
+.bottom-form p{
+  font-size: 12px;
+  text-align: left;
+  line-height: 2em;
+}
+
+
+.otp-form{
+  padding:15em 0px;
+  display: flex;
+  flex-direction: column;
+  width:60%;
+  margin: 0 auto;
+}
+
+.otp-form p {
+  font-size: 2em;
+  padding-bottom: 1.7em;
+}
+
+.otp-input{
+  margin: 0 auto;
+  width:80%;
+  background-color: whitesmoke;
+  padding: 1em 0;
+}
+
+.otp-form input{
+  width: 90%;
+  margin:0 auto;
+}
+
+.otp-form input:focus{
+  border:none;
+}
+
+.otp-form button{
+  width:50%;
+  margin-top:2em;
+  margin-left: auto;
+  margin-right: auto;
+
+
+}
+
+
+
 @media only screen and (max-width: 600px){
   .contactForm input{
     width:100%;
+    
   }
 
   .contactForm button{
     width:100%;
   }
+  .bottom-form{
+    width:90%;
+  }
+  .contactForm .nobk input{
+    margin:0;
+  }
+  
+  .otp-form{
+    width:90%
+  }
 }
 
+@media only screen and (max-width: 800px){
+  .name{
+    flex-direction: column;
+  }
 
+  .usphone{
+    position: static;
+  }
+  
+  .phone input{
+    position: static;
+    width:70%;
+  }
+
+
+  .contactForm{
+    width:90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .top-bar2{
+
+    padding-top:10px;
+  }
+
+  .top-bar2 .yellow{
+    width:20px;
+    height: auto;
+    margin-right: 0px;
+  }
+
+}
 
 /*Loader*/
 

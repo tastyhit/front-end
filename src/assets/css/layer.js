@@ -6,7 +6,7 @@ export const Button = styled.button`
     border:0;
     background: transparent;
     border-radius: 0.2em;
-    color:#00AAE7;
+    color:jade;
     padding: 1.2em;
     cursor: pointer;
     font-weight:600;
@@ -14,12 +14,12 @@ export const Button = styled.button`
     font-size:1.6em;
     width:100%;
     text-transform: uppercase;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.1em;
     
     ${props =>
     props.primary &&
     css`
-        color:white;
+        color:whitesmoke;
         background: #00AAE7;
       `}
     
@@ -39,37 +39,47 @@ export const LetterButton = styled.button`
 
 export const Input = styled.input`
   display:flex;
-  margin:0 auto;
   flex-direction:column;
   background: none;
   border:none;
-  border-bottom: 1px solid #00AAE7;
-  margin-bottom:1em;
-  padding: 5px 0 8px 15px;
-  font-size: 1.5em;
-  color: white;
+  border-bottom: 2px solid rgb(255, 195, 0);
+  font-size: 2em;
+  letter-spacing:1px;
+  color: black;
+  padding-left:2px;
   ::placeholder {
-    color: rgb(250,202,24);
-    padding-left: 5px;
+    color: dimgray;
+
+    
+
   }
   :focus {
     outline:none;
-    border:none;
+    border-bottom: 2px solid black;
 
   }
   ${props =>
     props.primary &&
     css`
-    margin-top:2em;
+    text-transform:uppercase;
+    color:black;
+    margin:0 auto;
+    margin-bottom:1em;
+    ::placeholder{
+      text-transform:none;
+    }
     `}
   ${props =>
     props.secondary &&
     css`
       border:none;
       margin-bottom:0px;
-      color:white;
+      color:black;
+      border:none;
+      margin-bottom:1em;
       :focus {
-        color:white;
+        border:none;
+        color:none;
     
       }
     
