@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 import Zipcode from './Zipcode';
 import AgeCheck from './AgeCheck';
-import ProductList from '../DashBoard/ProductList';
+
 
 class Landing extends Component {
     constructor() {

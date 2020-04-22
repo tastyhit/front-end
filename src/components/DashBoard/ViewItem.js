@@ -23,6 +23,7 @@ class ViewItem extends Component {
   }
 
   render() {
+    let width = window.innerWidth;
     if (this.state.signUp) {
       return <div className='item-signup'><div className='zip-wrapper'><ZipCode /></div></div>
     }
@@ -74,12 +75,22 @@ class ViewItem extends Component {
               <p>•18'' Inches Tall</p>
               <p>•5mm Thick</p>
             </div>
+            {width > 600 ? null : <div className='login'>
+              <div className='pic-name'>
+                <div className='pro-pic' />
+                <h1>Tasty Hits Shop</h1>
+              </div>
+
+              <Link to='/Login' className='box link'><Button primary>Log in</Button></Link>
+              <Button onClick={this.zipcode} className='sign-up'> Sign Up</Button>
+            </div>
+            }
 
             <MapView />
 
 
           </div>
-          <div className='right-wrapper'>
+          {600 < width ? <div className='right-wrapper'>
             <div className='login'>
               <div className='pic-name'>
                 <div className='pro-pic' />
@@ -89,10 +100,12 @@ class ViewItem extends Component {
               <Link to='/Login' className='box link'><Button primary>Log in</Button></Link>
               <Button onClick={this.zipcode} className='sign-up'> Sign Up</Button>
             </div>
-          </div>
+          </div> : null
+          }
+
         </div>
 
-      </div>
+      </div >
     )
   }
 }
