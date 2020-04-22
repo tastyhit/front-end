@@ -23,6 +23,7 @@ class ViewItem extends Component {
   }
 
   render() {
+    let width = window.innerWidth;
     if (this.state.signUp) {
       return <div className='item-signup'><div className='zip-wrapper'><ZipCode /></div></div>
     }
@@ -65,7 +66,7 @@ class ViewItem extends Component {
 
             <div className='summary'>
               This is the classic beaker tube by Maverick Glass. This 18'' tall bong features a 18mm to 14mm removable diffused downstem and comes with a 14mm male bowl. The ice pinch allows you to stack ice for an extra level of cooling. This highly functional bong will be sure to please and may quickly become your daily driver. The glass is 5mm thick. Made by Maverick Glass in California using high quality borosilicate glass.
-          </div>
+            </div>
             <div className='details'>
               <p>•Beaker Base Bong</p>
               <p>•18mm to 14mm Diffused Downstem</p>
@@ -74,8 +75,22 @@ class ViewItem extends Component {
               <p>•18'' Inches Tall</p>
               <p>•5mm Thick</p>
             </div>
+            {width > 600 ? null : <div className='login'>
+              <div className='pic-name'>
+                <div className='pro-pic' />
+                <h1>Tasty Hits Shop</h1>
+              </div>
+
+              <Link to='/Login' className='box link'><Button primary>Log in</Button></Link>
+              <Button onClick={this.zipcode} className='sign-up'> Sign Up</Button>
+            </div>
+            }
+
+            <MapView />
+
+
           </div>
-          <div className='right-wrapper'>
+          {600 < width ? <div className='right-wrapper'>
             <div className='login'>
               <div className='pic-name'>
                 <div className='pro-pic' />
@@ -85,10 +100,12 @@ class ViewItem extends Component {
               <Link to='/Login' className='box link'><Button primary>Log in</Button></Link>
               <Button onClick={this.zipcode} className='sign-up'> Sign Up</Button>
             </div>
-          </div>
+          </div> : null
+          }
+
         </div>
 
-      </div>
+      </div >
     )
   }
 }
