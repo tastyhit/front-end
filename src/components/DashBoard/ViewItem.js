@@ -65,7 +65,7 @@ class ViewItem extends Component {
 
             <div className='summary'>
               This is the classic beaker tube by Maverick Glass. This 18'' tall bong features a 18mm to 14mm removable diffused downstem and comes with a 14mm male bowl. The ice pinch allows you to stack ice for an extra level of cooling. This highly functional bong will be sure to please and may quickly become your daily driver. The glass is 5mm thick. Made by Maverick Glass in California using high quality borosilicate glass.
-          </div>
+            </div>
             <div className='details'>
               <p>•Beaker Base Bong</p>
               <p>•18mm to 14mm Diffused Downstem</p>
@@ -74,6 +74,10 @@ class ViewItem extends Component {
               <p>•18'' Inches Tall</p>
               <p>•5mm Thick</p>
             </div>
+
+            <MapView />
+
+
           </div>
           <div className='right-wrapper'>
             <div className='login'>
