@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 
 import '../../assets/css/product.css';
 
+const apimap = 'AIzaSyB6iLmaQqZJjnZQg5mRxqz0nwlMyNayZNo'
+
 const mapStyles = {
   width: '100%',
   height: '250px',
@@ -28,7 +30,7 @@ class MapView extends Component {
           strokeColor='transparent'
           strokeOpacity={0}
           strokeWeight={5}
-          fillColor='#FF0000'
+          fillColor='#00AAE7'
           fillOpacity={0.2} />
 
       </ Map >
@@ -41,5 +43,5 @@ class MapView extends Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyCSVbCNt5NEO1h1jJk6RWKmasFOkesXD7U'
+  apiKey: 'AIzaSyB6iLmaQqZJjnZQg5mRxqz0nwlMyNayZNo'
 })(MapView);
