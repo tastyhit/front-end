@@ -137,6 +137,7 @@
   width:100%;
   margin:0 auto;
   position: relative;
+  font-family: "Proxima", "Open Sans", "Helvetica";
 }
 
 .item-description{
@@ -161,15 +162,15 @@
 
 .price-name h1{
   font-size: 1.8em;
-  font-weight: 800;
   background-color:#ffc300 ;
   padding:1em;
+  font-weight: 800;
   
 }
 
 .price-name h2{
   color:#00AAE7;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 2.5em;
 }
 
@@ -311,6 +312,7 @@
   .price-name{
     flex-direction: column;
     align-items: flex-start;
+    width:100%;
   }
   
   .right-wrapper{
