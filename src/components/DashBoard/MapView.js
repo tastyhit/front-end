@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 import '../../assets/css/product.css';
 
-const apimap = 'AIzaSyB6iLmaQqZJjnZQg5mRxqz0nwlMyNayZNo'
+const apimap = 'AIzaSyDDpcPLSA0VfrYlqOm8n9OkfDG02waywMg'
 
 const mapStyles = {
   width: '100%',
@@ -43,5 +43,5 @@ class MapView extends Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyB6iLmaQqZJjnZQg5mRxqz0nwlMyNayZNo'
+  apiKey: apimap
 })(MapView);
