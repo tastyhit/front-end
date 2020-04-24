@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 import '../../assets/css/product.css';
 
-const apimap = 'AIzaSyDDpcPLSA0VfrYlqOm8n9OkfDG02waywMg'
+const apimap = process.env.REACT_APP_GOOGLEAPI
 
 const mapStyles = {
   width: '100%',
