@@ -22,17 +22,17 @@ class ProductList extends Component {
 
                     <div className='prodDisplayBG'>
                         <Link className='link-prod' to='/view'> <Product /></Link>
-                        <Link className='link-prod'> <Product /></Link>
-                        <Link className='link-prod'> <Product /></Link>
-                        <Link className='link-prod'> <Product /></Link>
-                        <Link className='link-prod'> <Product /></Link>
-                        <Link className='link-prod'> <Product /></Link>
-                        <Link className='link-prod'> <Product /></Link>
-                        <Link className='link-prod'> <Product /></Link>
-                        <Link className='link-prod'> <Product /></Link>
-                        <Link className='link-prod'> <Product /></Link>
-                        <Link className='link-prod'> <Product /></Link>
-                        <Link className='link-prod'> <Product /></Link>
+                        <Link className='link-prod' to='/view'> <Product /></Link>
+                        <Link className='link-prod' to='/view'> <Product /></Link>
+                        <Link className='link-prod' to='/view'> <Product /></Link>
+                        <Link className='link-prod' to='/view'> <Product /></Link>
+                        <Link className='link-prod' to='/view'> <Product /></Link>
+                        <Link className='link-prod' to='/view'> <Product /></Link>
+                        <Link className='link-prod' to='/view'> <Product /></Link>
+                        <Link className='link-prod' to='/view'> <Product /></Link>
+                        
+                        
+                        
 
 
                     </div>
