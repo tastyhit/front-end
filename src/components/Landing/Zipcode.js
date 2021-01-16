@@ -10,16 +10,16 @@ import addy from '../../assets/images/addyicon.png'
 const ZipButton = styled(Button)`
   background-color: rgb(255, 195, 0);
   border:none;
-  border-radius: 0 3em 3em 0;
+  
   font-size:1.5em;
   font-weight:bold;
   padding:.8em;
   width:40%;
-  color:white;
+  color:black;
   @media(max-width: 800px){
       margin-top:1em;
       width:100%;
-      border-radius: 3em;
+      
   }
 `;
 

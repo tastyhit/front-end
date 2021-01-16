@@ -6,8 +6,8 @@ import logo from '../../assets/images/Finalicon.png';
 import '../../assets/css/checkout.css'
 import USicon from '../../assets/images/usa-icon.jpg'
 
-const url = 'http://localhost:4000/api/users/login'
-const auth = 'http://localhost:4000/api/users/auth'
+const url = 'http://localhost:5000/users/login'
+const auth = 'http://localhost:5000/users/auth'
 
 class Login extends Component {
   constructor(props) {
@@ -35,6 +35,7 @@ class Login extends Component {
     axios
       .post(url, acc)
       .then(() => {
+        console.log('here')
         this.setState({ nextStep: true })
       })
       .catch(err => { console.log(err) })

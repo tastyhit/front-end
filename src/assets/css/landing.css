@@ -112,7 +112,7 @@
   width:100%;
   display:flex;
   justify-content: center;
-  border-radius: 3em;
+ 
   
 }
 
@@ -130,7 +130,6 @@
   border-left-color: rgba(0, 187, 255, 0.6);
   border-left-style: solid;
   border-left-width: 1px;
-  border-radius: 3em 0 0 3em;
   background-color: whitesmoke;
 }
 
@@ -295,7 +294,7 @@
   .zipinput-wrapper {
     width:100%;
     border:solid 1px rgba(0, 187, 255, 0.6);
-    border-radius:3em;
+   
     height:50px;
   }
 

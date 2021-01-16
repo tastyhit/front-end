@@ -5,7 +5,6 @@ import styled, { css } from 'styled-components';
 export const Button = styled.button`
     border:0;
     background: transparent;
-    border-radius: 0.2em;
     color:jade;
     padding: 1.2em;
     cursor: pointer;
@@ -46,8 +45,8 @@ export const Input = styled.input`
   background: none;
   border:none;
   border-bottom: 2px solid rgb(255, 195, 0);
-  font-size: 2em;
-  letter-spacing:1px;
+  font-size: 1.5em;
+  letter-spacing:1.5px;
   color: black;
   padding-left:2px;
   ::placeholder {

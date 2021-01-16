@@ -5,7 +5,7 @@ import axios from 'axios';
 
 import '../../assets/css/sales.css'
 
-const url = 'http://localhost:4000/api/users'
+const url = 'http://localhost:5000/users'
 
 class Sales extends Component {
     constructor() {
