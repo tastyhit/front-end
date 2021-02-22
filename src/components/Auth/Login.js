@@ -6,14 +6,18 @@ import logo from '../../assets/images/Finalicon.png';
 import '../../assets/css/checkout.css'
 import USicon from '../../assets/images/usa-icon.jpg'
 
-const url = 'http://localhost:5000/users/login'
-const auth = 'http://localhost:5000/users/auth'
+
+// const url = 'http://localhost:5000/users/login'
+//const auth = 'http://localhost:5000/users/auth'
+const url = 'https://tastyhits.herokuapp.com/users/login'
+const auth = 'https://tastyhits.herokuapp.com/users/auth'
 
 class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
       nextStep: false,
+      loader: false
     }
   }
 
@@ -34,9 +38,9 @@ class Login extends Component {
     const acc = { phone: this.state.phone }
     axios
       .post(url, acc)
-      .then(() => {
-        console.log('here')
-        this.setState({ nextStep: true })
+      .then(() => { 
+        this.setState({ nextStep: true})
+        this.props.history.push('/dashboard')
       })
       .catch(err => { console.log(err) })
   }
@@ -44,11 +48,11 @@ class Login extends Component {
   authOtp = (e) => {
     e.preventDefault();
     const acc = { phone: this.state.phone, otp: this.state.otp }
-    console.log(acc)
     axios
       .post(auth, acc)
       .then(() => {
-        this.props.history.push('/dashboard')
+        this.setState({loader: true})
+       
       })
       .catch(err => { console.log(err) })
   }
@@ -67,8 +71,10 @@ class Login extends Component {
               <div className='otp-input'>
                 <Input type='text' name='otp' value={this.state.otp || ''} onChange={this.inputHandler} maxLength='6' />
               </div>
-
-              <Button primary type='submit' onClick={this.authOtp}>Enter</Button>
+              {this.state.loader ? (
+                  <div className="loader"></div>
+                  ) : <Button primary type='submit' onClick={this.authOtp}>Enter</Button>}
+              
 
 
 
@@ -89,7 +95,10 @@ class Login extends Component {
                 </div>
                 <p>We'll send a text to verify your phone</p>
                 <p>By clicking next you agree to TastyHit's Terms and Conditions and Privacy Policy</p>
-                <Button primary type='submit' onClick={this.authUser}>Next</Button>
+                {this.state.loader ? (
+                  <div className="loader"></div>
+                  ) : <Button primary type='submit' onClick={this.authUser}>Next</Button>}
+                
               </div>
 
             </div>}

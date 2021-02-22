@@ -156,7 +156,8 @@
 }
 
 .otp-input{
-  margin: 0 auto;
+  
+  margin: 0 auto 1em auto;
   width:80%;
   background-color: whitesmoke;
   padding: 1em 0;

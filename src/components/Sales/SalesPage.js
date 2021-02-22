@@ -5,7 +5,8 @@ import axios from 'axios';
 
 import '../../assets/css/sales.css'
 
-const url = 'http://localhost:5000/users'
+const url = 'https://tastyhits.herokuapp.com/users'
+// const url = 'http://localhost:5000/users'
 
 class Sales extends Component {
     constructor() {
@@ -33,7 +34,7 @@ class Sales extends Component {
 
     submittingState = (name, email, phone) => {
         this.setState({ name: name, email: email, phone: phone })
-        const acc = { name, email, phone, zipcode: 90280, alive: true }
+        const acc = { name, email, phone, zipcode: 90280, alive: true, type_id: "1" }
         console.log(acc)
         axios
             .post(url, acc)
