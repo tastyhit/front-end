@@ -1,18 +1,31 @@
 import React, { Component } from 'react';
 
+import NavBar from './NavBar';
+import '../../assets/css/landing.css'
+import ZipCode from './Zipcode';
+import AgeCheck from './AgeCheck'
+import { Link } from 'react-router-dom';
+import ProductList from '../DashBoard/ProductList.js';
 
-import Zipcode from './Zipcode';
-import AgeCheck from './AgeCheck';
-
-
-class Landing extends Component {
+class LandingPage extends Component {
     constructor() {
         super();
         this.state = {
-            agecheck: false
+            over21: false,
+
         }
-        /*localStorage.clear();*/ //maybe delete
-        localStorage.setItem('age', this.state.agecheck)
+    }
+
+    pathClick = (e) => {
+        if (e.target.attributes.name.value === 'something') {
+            console.log('something')
+        } else if (e.target.attributes.name.value === 'something1') {
+            console.log('ok')
+        } else {
+            return null
+        }
+        //if e target is vendor then go to that page, if the click is vendee then go there
+        this.setState({})
     }
 
     ageAlert = (e) => {
@@ -21,22 +34,37 @@ class Landing extends Component {
     }
 
     render() {
+        let width = window.innerWidth;
         return (
-            <div className='landing'>
+            <div className='webpage wb1'>
+                {/* <div className='top-bar'>
+                    <div className='topBar-left'>
+                        <img src={logo} alt='Logo' className='yellow' />
+                    </div>
+                    {width > 800 ? <NavBar /> : <div className='mobile-menu'> <img src={menu} alt='menu' /></div>}
+                </div> */}
 
-                <div className='top-header'>
-                    <h1> Tasty Hits</h1>
+                <div className='top-wrapper'>
+                    <div className='title'>
+                        <h1>Tasty Hits</h1>
+                    </div>
+
+                    <div className='zipcode-section' >
+                        <ZipCode />
+                    </div>
                 </div>
-                <Zipcode />
-
+                
+                {width > 800 ? null : <div className='login-mobile'><h1>Already have an account? </h1><Link to='/Login'> Log In</Link></div>}
+                <ProductList />
                 {this.state.agecheck ? (
                     null
                 ) : <AgeCheck age={this.ageAlert} />}
-
             </div>
+
         )
     }
 
 }
 
-export default Landing;
+
+export default LandingPage;

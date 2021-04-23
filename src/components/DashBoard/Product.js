@@ -21,8 +21,13 @@ const Product = () => {
       <div className='value'>
         <p>Value:</p>
         <p>$60</p>
+        
       </div>
-
+      <div className='monthly'>
+        <p>Monthly:</p>
+        <p>18</p>
+      </div>
+      
 
 
     </div>

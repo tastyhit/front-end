@@ -8,12 +8,25 @@ inset 5px 5px 8px rgba(0,0,0,0.5);
   padding-top: 50px;
 }
 
+.prodDisplay-wrapper h1{
+  color:white;
+  font-size: 2.1em;
+  padding-bottom: 15px;
+}
+
 .yellow-bg{
   max-width: 1600px;
   max-width: 100%;
   margin:0 auto;
+  background-color:white;
 }
 
+.monthly{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color:rgb(255,195,0);
+}
 .prodDisplayBG{
   margin: 0 auto;
   padding-top: 30px;
@@ -30,8 +43,18 @@ inset 5px 5px 8px rgba(0,0,0,0.5);
   border: .1em solid #00AAE7;
   position: relative;
   border-radius: 5px;
+  padding-bottom:15px;
   
  
+}
+
+.prod-wrapper h1{
+  font-size: 1.4em;
+  font-weight: bold;
+  line-height: 1em;
+  font-family: "Proxima", "Open Sans", "Helvetica";
+  margin-bottom: 12px;
+  color:black;
 }
 
 
@@ -76,13 +99,7 @@ inset 5px 5px 8px rgba(0,0,0,0.5);
   top:0px;
 }
 
-.prodDisplay-wrapper h1{
-  font-size: 1.4em;
-  font-weight: bold;
-  line-height: 1em;
-  font-family: "Proxima", "Open Sans", "Helvetica";
-  margin-bottom: 12px;
-}
+
 
 .prodDisplay-wrapper p{
   font-size: 1.4em;
