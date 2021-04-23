@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import NavBar from './NavBar';
+
 import '../../assets/css/landing.css'
 import ZipCode from './Zipcode';
 import AgeCheck from './AgeCheck'
