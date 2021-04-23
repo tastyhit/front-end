@@ -42,19 +42,23 @@ class WebSite extends Component {
         let width = window.innerWidth;
         return (
             <div className='webpage wb1'>
-                <div className='top-bar'>
+                {/* <div className='top-bar'>
                     <div className='topBar-left'>
                         <img src={logo} alt='Logo' className='yellow' />
                     </div>
                     {width > 800 ? <NavBar /> : <div className='mobile-menu'> <img src={menu} alt='menu' /></div>}
-                </div>
-                <div className='title'>
-                    <h1>Tasty Hits</h1>
-                </div>
+                </div> */}
 
-                <div className='zipcode-section' >
-                    <ZipCode />
+                <div className='top-wrapper'>
+                    <div className='title'>
+                        <h1>Tasty Hits</h1>
+                    </div>
+
+                    <div className='zipcode-section' >
+                        <ZipCode />
+                    </div>
                 </div>
+                
                 {width > 800 ? null : <div className='login-mobile'><h1>Already have an account? </h1><Link to='/Login'> Log In</Link></div>}
                 <ProductList />
                 {this.state.agecheck ? (

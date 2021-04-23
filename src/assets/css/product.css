@@ -1,23 +1,27 @@
 .prodDisplay-wrapper{
-  max-width: 1200px;
-  width:100%;
+  
+ width:100%;
  margin:0 auto;
+ background-color: #00AAE7;
+ box-shadow: 2px 2px 5px rgba(0,0,0,0.5),
+inset 5px 5px 8px rgba(0,0,0,0.5);
+  padding-top: 50px;
 }
 
 .yellow-bg{
- 
+  max-width: 1600px;
+  max-width: 100%;
   margin:0 auto;
 }
 
 .prodDisplayBG{
-  width:90%;
   margin: 0 auto;
   padding-top: 30px;
   padding-bottom: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
+  
 }
 
 .prod-wrapper{
@@ -26,6 +30,7 @@
   border: .1em solid #00AAE7;
   position: relative;
   border-radius: 5px;
+  
  
 }
 
@@ -87,7 +92,7 @@
 }
 
 .link-prod{
-  width:30%;
+  width:20%;
   margin:2px;
   text-decoration: none;
   color:black;

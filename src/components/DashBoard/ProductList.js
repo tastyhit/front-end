@@ -18,6 +18,8 @@ class ProductList extends Component {
     render() {
         return (
             <div className='prodDisplay-wrapper'>
+
+                <h1>Recurring New Cleaned Piece, never worry about getting your hands sticky  </h1>
                 <div className='yellow-bg'>
 
                     <div className='prodDisplayBG'>

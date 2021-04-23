@@ -88,7 +88,7 @@ class ZipCode extends Component {
                     <h2>Discover the </h2>
                     <h2>taste of your herb</h2>
                 </div>
-                <h2>Let's get started</h2>
+                <h2>Find the nearest facility that can clean your piece</h2>
                 <form onSubmit={this.checkZipCode} className='inputContainer'>
                     <div className='zipcode-wrapper'>
                         <div className='zipinput-wrapper'>
@@ -97,7 +97,7 @@ class ZipCode extends Component {
                                 value={this.state.zipcode} onChange={this.inputHandler} maxLength='5' placeholder='Enter your Zipcode...' />
                         </div>
 
-                        <ZipButton type='submit' >Sign Up</ZipButton>
+                        <ZipButton type='submit' >Locate</ZipButton>
 
 
                     </div>
